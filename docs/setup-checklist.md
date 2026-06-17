@@ -1,0 +1,32 @@
+# Setup Checklist
+
+## Local Setup
+
+- [ ] Clone repository.
+- [ ] Create local `.env` from `.env.example`.
+- [ ] Fill local database credentials.
+- [ ] Install Python dependencies.
+- [ ] Run PostgreSQL schema.
+- [ ] Run demo mode.
+- [ ] Review CSV export.
+
+## Database Setup
+
+```bash
+psql "$DATABASE_URL" -f sql/001_schema.sql
+psql "$DATABASE_URL" -f sql/002_demo_data.sql
+```
+
+## Demo Run
+
+```bash
+python src/main.py --city "Москва" --category "Металлообработка" --limit 10 --demo
+```
+
+## Before Public Release
+
+- [ ] Remove real exports.
+- [ ] Remove `.env`.
+- [ ] Check screenshots.
+- [ ] Run secret search.
+- [ ] Keep only demo data.
