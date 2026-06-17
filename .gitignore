@@ -1,0 +1,42 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Secrets / private data
+credentials.json
+secrets.json
+cookies.txt
+session.json
+private/
+backup/
+*.bak
+*.backup
+
+# Database dumps
+*.dump
+*.sql.gz
+*.backup
+
+# Real lead exports
+exports/*.csv
+!exports/.gitkeep
+real_leads*.json
+real_leads*.csv
+leads_private*.csv
+
+# Logs
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
