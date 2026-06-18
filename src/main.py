@@ -6,7 +6,7 @@ import argparse
 
 from categories import list_categories, validate_category
 from config import load_config
-from db import create_parser_job, finish_parser_job, save_companies_for_job
+from db import create_parser_job, finish_parser_job, save_companies_for_job, save_enrichment_sources
 from enrich import enrich_companies
 from exporter import export_companies_to_csv
 from parser_2gis import collect_2gis_leads, collect_demo_leads
@@ -56,10 +56,16 @@ def main() -> None:
     db_new_count = len(companies)
     db_duplicate_count = 0
     db_job_id = None
+    db_enrichment_sources_count = 0
 
     if args.save_db:
         db_job_id = create_parser_job(config=config, city=city, category=category, limit_requested=limit)
         save_result = save_companies_for_job(config=config, job_id=db_job_id, companies=companies)
+        db_enrichment_sources_count = save_enrichment_sources(
+            config=config,
+            companies=companies,
+            enrichment=enrichment,
+        )
         db_new_count = save_result.new_count
         db_duplicate_count = save_result.duplicate_count
         finish_parser_job(
@@ -68,7 +74,7 @@ def main() -> None:
             found_count=len(companies),
             new_count=db_new_count,
             duplicate_count=db_duplicate_count,
-            enriched_count=sum(1 for item in enrichment if item.enriched),
+            enriched_count=db_enrichment_sources_count,
         )
 
     export_path = None
@@ -92,6 +98,7 @@ def main() -> None:
         print(f"Job ID: {db_job_id}")
         print(f"DB new: {db_new_count}")
         print(f"DB duplicates: {db_duplicate_count}")
+        print(f"DB enrichment sources: {db_enrichment_sources_count}")
 
 
 if __name__ == "__main__":
