@@ -122,6 +122,11 @@ def collect_demo_leads(city: str, category: str, limit: int = 10) -> list[Compan
     return demo[:limit]
 
 
+def _safe_sleep(seconds: float) -> None:
+    if seconds > 0:
+        time.sleep(seconds)
+
+
 def _first_contact_value(item: dict[str, Any], contact_type: str) -> str | None:
     for group in item.get("contact_groups", []) or []:
         for contact in group.get("contacts", []) or []:
@@ -244,7 +249,13 @@ def _fetch_company_details(company: CompanyLead, api_key: str) -> CompanyLead:
     return _merge_company(base=company, detail=detail)
 
 
-def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str | None = None) -> list[CompanyLead]:
+def collect_2gis_leads(
+    city: str,
+    category: str,
+    limit: int = 10,
+    api_key: str | None = None,
+    request_delay_seconds: float = 1.0,
+) -> list[CompanyLead]:
     """Collect companies from 2GIS Catalog API using a local API key.
 
     This function uses normal API requests only. It does not scrape pages,
@@ -291,7 +302,7 @@ def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str |
                 break
 
         page += 1
-        time.sleep(0.5)
+        _safe_sleep(request_delay_seconds)
 
     detailed_companies: list[CompanyLead] = []
     for company in companies:
@@ -300,6 +311,6 @@ def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str |
         except requests.HTTPError as exc:
             print(f"Warning: details request failed for {company.source_company_id}: {exc}")
             detailed_companies.append(company)
-        time.sleep(0.25)
+        _safe_sleep(request_delay_seconds)
 
     return detailed_companies
