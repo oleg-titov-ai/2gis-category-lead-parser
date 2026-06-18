@@ -23,6 +23,15 @@ class DbSaveResult:
     duplicate_count: int
 
 
+@dataclass(frozen=True)
+class EnrichmentQueueRow:
+    company_id: int
+    company_name: str
+    google_search_url: str | None
+    yandex_search_url: str | None
+    two_gis_url: str | None
+
+
 def get_connection(config: AppConfig):
     return psycopg.connect(build_database_url(config))
 
@@ -194,6 +203,63 @@ def save_enrichment_sources(
         conn.commit()
 
     return saved_count
+
+
+def get_enrichment_queue(config: AppConfig, limit: int = 20) -> list[EnrichmentQueueRow]:
+    """Return compact enrichment queue rows for CLI output."""
+    query = """
+        SELECT
+            c.id AS company_id,
+            c.name AS company_name,
+            MAX(CASE WHEN es.source_type = 'google_search' THEN es.source_url END) AS google_search_url,
+            MAX(CASE WHEN es.source_type = 'yandex_search' THEN es.source_url END) AS yandex_search_url,
+            MAX(CASE WHEN es.source_type = '2gis_card' THEN es.source_url END) AS two_gis_url
+        FROM companies c
+        JOIN enrichment_sources es ON es.company_id = c.id
+        GROUP BY c.id, c.name
+        ORDER BY c.id DESC
+        LIMIT %s;
+    """
+
+    with get_connection(config) as conn:
+        with conn.cursor() as cur:
+            cur.execute(query, (limit,))
+            rows = cur.fetchall()
+
+    return [
+        EnrichmentQueueRow(
+            company_id=int(row[0]),
+            company_name=str(row[1]),
+            google_search_url=row[2],
+            yandex_search_url=row[3],
+            two_gis_url=row[4],
+        )
+        for row in rows
+    ]
+
+
+def add_company_contact(
+    config: AppConfig,
+    company_id: int,
+    contact_type: str,
+    value: str,
+    source_url: str | None = None,
+    is_verified: bool = True,
+) -> None:
+    """Add a manually verified contact to company_contacts."""
+    query = """
+        INSERT INTO company_contacts (company_id, contact_type, value, source_url, is_verified)
+        VALUES (%s, %s, %s, %s, %s)
+        ON CONFLICT (company_id, contact_type, value) DO UPDATE
+        SET
+            source_url = COALESCE(EXCLUDED.source_url, company_contacts.source_url),
+            is_verified = EXCLUDED.is_verified;
+    """
+
+    with get_connection(config) as conn:
+        with conn.cursor() as cur:
+            cur.execute(query, (company_id, contact_type, value, source_url, is_verified))
+        conn.commit()
 
 
 def save_companies(config: AppConfig, companies: list[CompanyLead]) -> int:
