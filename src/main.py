@@ -6,6 +6,7 @@ import argparse
 
 from categories import list_categories, validate_category
 from config import load_config
+from db import create_parser_job, finish_parser_job, save_companies_for_job
 from enrich import enrich_companies
 from exporter import export_companies_to_csv
 from parser_2gis import collect_2gis_leads, collect_demo_leads
@@ -18,6 +19,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--category", default=None, help="Category name")
     parser.add_argument("--limit", type=int, default=None, help="Company limit, default 10")
     parser.add_argument("--demo", action="store_true", help="Use demo data instead of live collector")
+    parser.add_argument("--save-db", action="store_true", help="Save parsed companies to PostgreSQL")
     parser.add_argument("--list-categories", action="store_true", help="Print allowed categories and exit")
     return parser
 
@@ -51,6 +53,24 @@ def main() -> None:
         timeout=config.request_timeout_seconds,
     )
 
+    db_new_count = len(companies)
+    db_duplicate_count = 0
+    db_job_id = None
+
+    if args.save_db:
+        db_job_id = create_parser_job(config=config, city=city, category=category, limit_requested=limit)
+        save_result = save_companies_for_job(config=config, job_id=db_job_id, companies=companies)
+        db_new_count = save_result.new_count
+        db_duplicate_count = save_result.duplicate_count
+        finish_parser_job(
+            config=config,
+            job_id=db_job_id,
+            found_count=len(companies),
+            new_count=db_new_count,
+            duplicate_count=db_duplicate_count,
+            enriched_count=sum(1 for item in enrichment if item.enriched),
+        )
+
     export_path = None
     if config.export_csv:
         export_path = export_companies_to_csv(companies, enrichment, config.export_path)
@@ -65,6 +85,13 @@ def main() -> None:
     )
 
     print(report.to_text())
+
+    if args.save_db:
+        print("")
+        print("Database save:")
+        print(f"Job ID: {db_job_id}")
+        print(f"DB new: {db_new_count}")
+        print(f"DB duplicates: {db_duplicate_count}")
 
 
 if __name__ == "__main__":
