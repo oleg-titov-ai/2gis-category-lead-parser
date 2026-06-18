@@ -101,7 +101,13 @@ def main() -> None:
     if args.demo or config.dgis_api_key == "DEMO_DGIS_API_KEY":
         companies = collect_demo_leads(city=city, category=category, limit=limit)
     else:
-        companies = collect_2gis_leads(city=city, category=category, limit=limit, api_key=config.dgis_api_key)
+        companies = collect_2gis_leads(
+            city=city,
+            category=category,
+            limit=limit,
+            api_key=config.dgis_api_key,
+            request_delay_seconds=config.request_delay_seconds,
+        )
 
     enrichment = enrich_companies(
         companies,
