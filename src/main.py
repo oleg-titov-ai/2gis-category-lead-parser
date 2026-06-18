@@ -39,8 +39,8 @@ def main() -> None:
     category = validate_category(args.category or "Металлообработка")
     limit = args.limit or config.default_limit
 
-    if limit > 10:
-        raise ValueError("MVP limit is 10 companies per run.")
+    if limit > 30:
+        raise ValueError("MVP limit is 30 companies per run.")
 
     if args.demo or config.dgis_api_key == "DEMO_DGIS_API_KEY":
         companies = collect_demo_leads(city=city, category=category, limit=limit)
