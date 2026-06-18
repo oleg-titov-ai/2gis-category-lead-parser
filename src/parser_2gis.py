@@ -14,6 +14,7 @@ from typing import Any
 import requests
 
 CATALOG_ITEMS_URL = "https://catalog.api.2gis.com/3.0/items"
+CATALOG_ITEM_BY_ID_URL = "https://catalog.api.2gis.com/3.0/items/byid"
 DEFAULT_FIELDS = ",".join(
     [
         "items.point",
@@ -22,6 +23,17 @@ DEFAULT_FIELDS = ",".join(
         "items.schedule",
         "items.reviews",
         "items.rubrics",
+    ]
+)
+DETAIL_FIELDS = ",".join(
+    [
+        "items.point",
+        "items.address_name",
+        "items.contact_groups",
+        "items.schedule",
+        "items.reviews",
+        "items.rubrics",
+        "items.description",
     ]
 )
 
@@ -117,6 +129,14 @@ def _first_contact_value(item: dict[str, Any], contact_type: str) -> str | None:
                 value = contact.get("value") or contact.get("text")
                 if value:
                     return str(value)
+                values = contact.get("values")
+                if isinstance(values, list) and values:
+                    first = values[0]
+                    if isinstance(first, dict):
+                        nested_value = first.get("value") or first.get("text")
+                        if nested_value:
+                            return str(nested_value)
+                    return str(first)
     return None
 
 
@@ -185,8 +205,43 @@ def _to_company(item: dict[str, Any], city: str, category: str) -> CompanyLead:
         working_hours=_working_hours(item),
         latitude=latitude,
         longitude=longitude,
-        description=item.get("purpose_name") or item.get("type"),
+        description=item.get("description") or item.get("purpose_name") or item.get("type"),
     )
+
+
+def _merge_company(base: CompanyLead, detail: CompanyLead) -> CompanyLead:
+    return CompanyLead(
+        source=base.source,
+        source_company_id=base.source_company_id,
+        name=detail.name or base.name,
+        category=base.category,
+        city=base.city,
+        address=detail.address or base.address,
+        phone=detail.phone or base.phone,
+        website=detail.website or base.website,
+        rating=detail.rating if detail.rating is not None else base.rating,
+        reviews_count=detail.reviews_count if detail.reviews_count is not None else base.reviews_count,
+        working_hours=detail.working_hours or base.working_hours,
+        latitude=detail.latitude if detail.latitude is not None else base.latitude,
+        longitude=detail.longitude if detail.longitude is not None else base.longitude,
+        description=detail.description or base.description,
+    )
+
+
+def _fetch_company_details(company: CompanyLead, api_key: str) -> CompanyLead:
+    params = {
+        "id": company.source_company_id,
+        "fields": DETAIL_FIELDS,
+        "key": api_key,
+    }
+    response = requests.get(CATALOG_ITEM_BY_ID_URL, params=params, timeout=20)
+    response.raise_for_status()
+    payload = response.json()
+    items = payload.get("result", {}).get("items", [])
+    if not items:
+        return company
+    detail = _to_company(item=items[0], city=company.city, category=company.category)
+    return _merge_company(base=company, detail=detail)
 
 
 def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str | None = None) -> list[CompanyLead]:
@@ -238,4 +293,13 @@ def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str |
         page += 1
         time.sleep(0.5)
 
-    return companies
+    detailed_companies: list[CompanyLead] = []
+    for company in companies:
+        try:
+            detailed_companies.append(_fetch_company_details(company=company, api_key=api_key))
+        except requests.HTTPError as exc:
+            print(f"Warning: details request failed for {company.source_company_id}: {exc}")
+            detailed_companies.append(company)
+        time.sleep(0.25)
+
+    return detailed_companies
