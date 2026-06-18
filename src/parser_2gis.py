@@ -1,12 +1,42 @@
-"""2GIS collector skeleton.
+"""2GIS collector.
 
 Public repository version uses demo data by default.
-Connect an allowed data source or official API locally.
+Live mode uses a 2GIS API key from a local .env file.
+Do not commit real API keys to GitHub.
 """
 
 from __future__ import annotations
 
+import time
 from dataclasses import dataclass, asdict
+from typing import Any
+
+import requests
+
+CATALOG_ITEMS_URL = "https://catalog.api.2gis.com/3.0/items"
+DEFAULT_FIELDS = ",".join(
+    [
+        "items.point",
+        "items.address_name",
+        "items.contact_groups",
+        "items.schedule",
+        "items.reviews",
+        "items.rubrics",
+    ]
+)
+
+# City center coordinates for small portfolio/demo runs.
+# 2GIS API search is location-oriented, so we need a center point.
+CITY_CENTERS = {
+    "москва": "37.6173,55.7558",
+    "санкт-петербург": "30.3159,59.9391",
+    "спб": "30.3159,59.9391",
+    "ростов-на-дону": "39.7203,47.2221",
+    "краснодар": "38.9747,45.0355",
+    "екатеринбург": "60.6057,56.8389",
+    "новосибирск": "82.9204,55.0302",
+    "казань": "49.1064,55.7961",
+}
 
 
 @dataclass
@@ -80,16 +110,132 @@ def collect_demo_leads(city: str, category: str, limit: int = 10) -> list[Compan
     return demo[:limit]
 
 
-def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str | None = None) -> list[CompanyLead]:
-    """Placeholder for a real allowed 2GIS/API integration.
+def _first_contact_value(item: dict[str, Any], contact_type: str) -> str | None:
+    for group in item.get("contact_groups", []) or []:
+        for contact in group.get("contacts", []) or []:
+            if contact.get("type") == contact_type:
+                value = contact.get("value") or contact.get("text")
+                if value:
+                    return str(value)
+    return None
 
-    This public repo intentionally does not include scraping code that bypasses
-    anti-bot systems. Implement locally using permitted data access.
+
+def _rating(item: dict[str, Any]) -> float | None:
+    reviews = item.get("reviews") or {}
+    value = reviews.get("general_rating") or reviews.get("rating")
+    try:
+        return float(value) if value is not None else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _reviews_count(item: dict[str, Any]) -> int | None:
+    reviews = item.get("reviews") or {}
+    value = reviews.get("general_review_count") or reviews.get("review_count")
+    try:
+        return int(value) if value is not None else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _working_hours(item: dict[str, Any]) -> str | None:
+    schedule = item.get("schedule")
+    if not schedule:
+        return None
+    if isinstance(schedule, dict):
+        if schedule.get("text"):
+            return str(schedule["text"])
+        return str(schedule)
+    return str(schedule)
+
+
+def _point(item: dict[str, Any]) -> tuple[float | None, float | None]:
+    point = item.get("point") or {}
+    try:
+        lon = float(point["lon"]) if point.get("lon") is not None else None
+        lat = float(point["lat"]) if point.get("lat") is not None else None
+        return lat, lon
+    except (TypeError, ValueError):
+        return None, None
+
+
+def _city_location(city: str) -> str:
+    key = city.strip().lower()
+    if key not in CITY_CENTERS:
+        raise ValueError(
+            f"No default coordinates for city '{city}'. "
+            "Add it to CITY_CENTERS in src/parser_2gis.py or use a supported city."
+        )
+    return CITY_CENTERS[key]
+
+
+def _to_company(item: dict[str, Any], city: str, category: str) -> CompanyLead:
+    latitude, longitude = _point(item)
+    return CompanyLead(
+        source="2gis",
+        source_company_id=str(item.get("id") or item.get("hash") or item.get("name")),
+        name=str(item.get("name") or "Unknown company"),
+        category=category,
+        city=city,
+        address=item.get("address_name") or item.get("full_name"),
+        phone=_first_contact_value(item, "phone"),
+        website=_first_contact_value(item, "website"),
+        rating=_rating(item),
+        reviews_count=_reviews_count(item),
+        working_hours=_working_hours(item),
+        latitude=latitude,
+        longitude=longitude,
+        description=item.get("purpose_name") or item.get("type"),
+    )
+
+
+def collect_2gis_leads(city: str, category: str, limit: int = 10, api_key: str | None = None) -> list[CompanyLead]:
+    """Collect companies from 2GIS Catalog API using a local API key.
+
+    This function uses normal API requests only. It does not scrape pages,
+    bypass anti-bot systems, use cookies, or solve captchas.
     """
     if not api_key or api_key == "DEMO_DGIS_API_KEY":
         return collect_demo_leads(city=city, category=category, limit=limit)
 
-    raise NotImplementedError(
-        "Real 2GIS integration is intentionally not included in the public skeleton. "
-        "Use an official or otherwise permitted data source locally."
-    )
+    if limit > 30:
+        raise ValueError("Live MVP limit is 30 companies per run.")
+
+    location = _city_location(city)
+    page_size = min(limit, 10)
+    companies: list[CompanyLead] = []
+    seen_ids: set[str] = set()
+    page = 1
+
+    while len(companies) < limit:
+        params = {
+            "q": category,
+            "location": location,
+            "radius": 50000,
+            "page": page,
+            "page_size": page_size,
+            "fields": DEFAULT_FIELDS,
+            "key": api_key,
+        }
+
+        response = requests.get(CATALOG_ITEMS_URL, params=params, timeout=20)
+        response.raise_for_status()
+        payload = response.json()
+
+        items = payload.get("result", {}).get("items", [])
+        if not items:
+            break
+
+        for item in items:
+            company = _to_company(item=item, city=city, category=category)
+            if company.source_company_id in seen_ids:
+                continue
+            seen_ids.add(company.source_company_id)
+            companies.append(company)
+            if len(companies) >= limit:
+                break
+
+        page += 1
+        time.sleep(0.5)
+
+    return companies
