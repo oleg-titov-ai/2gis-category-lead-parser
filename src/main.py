@@ -6,7 +6,14 @@ import argparse
 
 from categories import list_categories, validate_category
 from config import load_config
-from db import create_parser_job, finish_parser_job, save_companies_for_job, save_enrichment_sources
+from db import (
+    add_company_contact,
+    create_parser_job,
+    finish_parser_job,
+    get_enrichment_queue,
+    save_companies_for_job,
+    save_enrichment_sources,
+)
 from enrich import enrich_companies
 from exporter import export_companies_to_csv
 from parser_2gis import collect_2gis_leads, collect_demo_leads
@@ -21,7 +28,48 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--demo", action="store_true", help="Use demo data instead of live collector")
     parser.add_argument("--save-db", action="store_true", help="Save parsed companies to PostgreSQL")
     parser.add_argument("--list-categories", action="store_true", help="Print allowed categories and exit")
+    parser.add_argument("--show-enrichment-queue", action="store_true", help="Show prepared enrichment search links")
+    parser.add_argument("--add-contact", action="store_true", help="Add a manually verified contact to company_contacts")
+    parser.add_argument("--company-id", type=int, default=None, help="Company ID for --add-contact")
+    parser.add_argument("--type", dest="contact_type", default=None, help="Contact type for --add-contact: phone, website, email")
+    parser.add_argument("--value", default=None, help="Contact value for --add-contact")
+    parser.add_argument("--source-url", default=None, help="Source URL for --add-contact")
     return parser
+
+
+def _print_enrichment_queue(limit: int) -> None:
+    config = load_config()
+    rows = get_enrichment_queue(config=config, limit=limit)
+    if not rows:
+        print("Enrichment queue is empty.")
+        return
+
+    for row in rows:
+        print("-" * 80)
+        print(f"company_id: {row.company_id}")
+        print(f"company_name: {row.company_name}")
+        print(f"google: {row.google_search_url or ''}")
+        print(f"yandex: {row.yandex_search_url or ''}")
+        print(f"2gis: {row.two_gis_url or ''}")
+
+
+def _add_contact(args: argparse.Namespace) -> None:
+    if not args.company_id or not args.contact_type or not args.value:
+        raise ValueError("--add-contact requires --company-id, --type and --value")
+
+    config = load_config()
+    add_company_contact(
+        config=config,
+        company_id=args.company_id,
+        contact_type=args.contact_type,
+        value=args.value,
+        source_url=args.source_url,
+        is_verified=True,
+    )
+    print("Contact saved")
+    print(f"company_id: {args.company_id}")
+    print(f"type: {args.contact_type}")
+    print(f"value: {args.value}")
 
 
 def main() -> None:
@@ -33,6 +81,14 @@ def main() -> None:
         print("Available categories:")
         for category in list_categories():
             print(f"- {category}")
+        return
+
+    if args.show_enrichment_queue:
+        _print_enrichment_queue(limit=args.limit or 20)
+        return
+
+    if args.add_contact:
+        _add_contact(args)
         return
 
     city = args.city or config.default_city
