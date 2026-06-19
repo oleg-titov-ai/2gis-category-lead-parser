@@ -1,14 +1,47 @@
 # 2GIS Category Lead Parser
 
-Portfolio-ready MVP for collecting a small batch of B2B company leads by city and category, saving them to PostgreSQL, preparing open-source enrichment links, manually verifying contacts, and exporting CSV reports.
+Portfolio-ready MVP for collecting B2B company leads by city and category, saving them to PostgreSQL, preparing enrichment links, manually verifying contacts, and exporting CSV reports.
 
-> This project is designed for careful, limited, lawful lead research. Do not use it for aggressive scraping, bypassing anti-bot systems, collecting private personal data, or scraping search engine result pages.
+> Designed for careful, limited lead research. The public repository intentionally avoids aggressive scraping, captcha bypassing, private data collection, cookies, proxy rotation, and scraping search engine result pages.
 
 ---
 
-## 🇬🇧 Short Description
+## Business Problem
 
-**2GIS Category Lead Parser** helps select a business category and city, collect up to **30 companies per run** through the 2GIS API, store them in PostgreSQL, prepare enrichment sources, manually verify contacts, and produce a summary report.
+Small B2B teams often need a quick way to collect a focused list of companies from a specific city and business category, then prepare that list for manual or API-based enrichment.
+
+Typical manual workflow:
+
+```text
+search category manually
+copy companies into a spreadsheet
+check duplicates
+open search links
+verify contacts
+prepare outreach list
+```
+
+This project turns that workflow into a structured mini-pipeline.
+
+---
+
+## Solution
+
+**2GIS Category Lead Parser** collects up to **30 companies per run** from the 2GIS API, stores them in PostgreSQL, creates enrichment source links, supports manual contact verification, and exports CSV files.
+
+```text
+2GIS API
+  ↓
+normalized company records
+  ↓
+PostgreSQL
+  ↓
+enrichment queue
+  ↓
+verified contacts
+  ↓
+CSV / CRM-ready workflow
+```
 
 ---
 
@@ -79,11 +112,14 @@ Export CSV + terminal report
 ├── .env.example
 ├── docs/
 │   ├── architecture.md
+│   ├── database-schema.md
+│   ├── demo-scenario.md
+│   ├── enrichment-strategy.md
 │   ├── legal-notes.md
+│   ├── roadmap.md
 │   ├── setup-checklist.md
 │   ├── security.md
 │   └── screenshots/
-│       └── .gitkeep
 ├── sql/
 │   ├── 001_schema.sql
 │   ├── 002_demo_data.sql
@@ -98,12 +134,22 @@ Export CSV + terminal report
 │   ├── report.py
 │   └── exporter.py
 ├── exports/
-│   └── .gitkeep
 ├── screenshots/
-│   └── .gitkeep
 └── tests/
-    └── .gitkeep
 ```
+
+---
+
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Database Schema](docs/database-schema.md)
+- [Demo Scenario](docs/demo-scenario.md)
+- [Enrichment Strategy](docs/enrichment-strategy.md)
+- [Roadmap](docs/roadmap.md)
+- [Setup Checklist](docs/setup-checklist.md)
+- [Security](docs/security.md)
+- [Legal Notes](docs/legal-notes.md)
 
 ---
 
@@ -220,6 +266,26 @@ Supported contact types:
 phone
 website
 email
+```
+
+---
+
+## Screenshots
+
+Recommended screenshots for portfolio presentation:
+
+```text
+1. Live parser terminal run
+2. Enrichment queue terminal output
+3. PostgreSQL tables in a database client
+4. GitHub README page
+5. CSV export folder
+```
+
+Place screenshots in:
+
+```text
+docs/screenshots/
 ```
 
 ---
