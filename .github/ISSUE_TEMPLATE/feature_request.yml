@@ -1,0 +1,60 @@
+name: Feature request
+description: Suggest a practical improvement for the parser, database flow, export, or automation.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the business value first. Do not include API keys, credentials, private leads, or production URLs.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What user or business problem should this feature address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Explain the expected behavior and the smallest useful version.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Project area
+      options:
+        - 2GIS collection
+        - PostgreSQL storage
+        - Enrichment workflow
+        - CSV export
+        - CLI and configuration
+        - Tests and CI
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Expected result 1
+        - [ ] Expected result 2
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checklist
+      options:
+        - label: The proposal does not require captcha bypassing, cookie theft, or prohibited scraping.
+          required: true
+        - label: The proposal can be demonstrated without private customer data.
+          required: true
