@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a reproducible problem in the parser, database flow, export, or CLI.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Do not include API keys, passwords, private leads, or production credentials.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest safe example that reproduces the issue.
+      placeholder: |
+        1. Run ...
+        2. Use demo mode ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12"
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - Demo mode
+        - Live 2GIS API mode
+        - PostgreSQL save
+        - CSV export
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Safe logs or output
+      description: Remove secrets, personal data, real contacts, and production URLs before posting.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checklist
+      options:
+        - label: I removed API keys, credentials, and private customer data.
+          required: true
+        - label: I tested the issue with the latest main branch.
+          required: true
