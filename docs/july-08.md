@@ -9,3 +9,4 @@ Small repository note.
 - Next pass: verify setup steps from a new user view.
 - Evening pass: keep installation notes aligned with the demo parser flow.
 - Morning pass: make example input and output expectations easy to verify.
+- Midday pass: keep lead export examples understandable for portfolio review.
