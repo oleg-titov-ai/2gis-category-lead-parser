@@ -10,3 +10,4 @@ Small repository note.
 - Evening pass: keep installation notes aligned with the demo parser flow.
 - Morning pass: make example input and output expectations easy to verify.
 - Midday pass: keep lead export examples understandable for portfolio review.
+- Review note: keep category and location examples clearly separated.
