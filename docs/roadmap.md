@@ -26,6 +26,8 @@ ContactVerifier
 
 This would allow connecting permitted search/data APIs without changing the core pipeline.
 
+Use only providers and data sources whose terms permit the intended enrichment workflow.
+
 ### 2. Deduplication for Enrichment Sources
 
 Add a uniqueness rule for enrichment sources:
