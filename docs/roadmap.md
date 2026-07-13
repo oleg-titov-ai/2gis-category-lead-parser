@@ -43,7 +43,8 @@ Add additional export formats:
 - CSV;
 - JSON;
 - Excel;
-- CRM-ready import file.
+- CRM-ready import file;
+- automated validation of required columns before export.
 
 ### 4. Verification Dashboard
 
