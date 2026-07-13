@@ -46,7 +46,8 @@ Add additional export formats:
 - JSON;
 - Excel;
 - CRM-ready import file;
-- automated validation of required columns before export.
+- automated validation of required columns before export;
+- explicit UTF-8 encoding checks for exported text fields.
 
 ### 4. Verification Dashboard
 
