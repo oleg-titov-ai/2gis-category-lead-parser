@@ -6,6 +6,7 @@
 - [ ] Create local `.env` from `.env.example`.
 - [ ] Fill local database credentials.
 - [ ] Install Python dependencies.
+- [ ] Verify setup in a clean virtual environment.
 - [ ] Run PostgreSQL schema.
 - [ ] Run demo mode.
 - [ ] Review CSV export.
