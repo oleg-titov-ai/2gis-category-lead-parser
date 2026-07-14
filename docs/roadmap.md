@@ -47,7 +47,8 @@ Add additional export formats:
 - Excel;
 - CRM-ready import file;
 - automated validation of required columns before export;
-- explicit UTF-8 encoding checks for exported text fields.
+- explicit UTF-8 encoding checks for exported text fields;
+- a small regression fixture for verifying column order and headers.
 
 ### 4. Verification Dashboard
 
