@@ -17,6 +17,8 @@ psql "$DATABASE_URL" -f sql/001_schema.sql
 psql "$DATABASE_URL" -f sql/002_demo_data.sql
 ```
 
+- [ ] Confirm a test backup can be restored before using non-demo data.
+
 ## Demo Run
 
 ```bash
