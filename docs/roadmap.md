@@ -48,7 +48,8 @@ Add additional export formats:
 - CRM-ready import file;
 - automated validation of required columns before export;
 - explicit UTF-8 encoding checks for exported text fields;
-- a small regression fixture for verifying column order and headers.
+- a small regression fixture for verifying column order and headers;
+- safe filename normalization for city and category values.
 
 ### 4. Verification Dashboard
 
