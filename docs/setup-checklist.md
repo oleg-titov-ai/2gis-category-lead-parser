@@ -10,6 +10,7 @@
 - [ ] Run PostgreSQL schema.
 - [ ] Run demo mode.
 - [ ] Review CSV export.
+- [ ] Open the exported CSV in a spreadsheet app and verify UTF-8 text renders correctly.
 
 ## Database Setup
 
