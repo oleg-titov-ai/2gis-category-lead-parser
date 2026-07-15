@@ -31,6 +31,7 @@ python src/main.py --city "Москва" --category "Металлообрабо�
 ## Before Public Release
 
 - [ ] Remove real exports.
+- [ ] Confirm generated demo exports contain no local file paths or operator names.
 - [ ] Remove `.env`.
 - [ ] Check screenshots.
 - [ ] Run secret search.
