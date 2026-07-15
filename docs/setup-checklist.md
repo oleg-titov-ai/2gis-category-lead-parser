@@ -11,6 +11,7 @@
 - [ ] Run demo mode.
 - [ ] Review CSV export.
 - [ ] Open the exported CSV in a spreadsheet app and verify UTF-8 text renders correctly.
+- [ ] Confirm exported CSV headers match the documented schema before CRM import.
 
 ## Database Setup
 
