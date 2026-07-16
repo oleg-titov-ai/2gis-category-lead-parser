@@ -13,6 +13,7 @@
 - [ ] Open the exported CSV in a spreadsheet app and verify UTF-8 text renders correctly.
 - [ ] Confirm exported CSV headers match the documented schema before CRM import.
 - [ ] Repeat the same demo command and confirm the export structure remains consistent.
+- [ ] Confirm exported filenames do not expose local usernames or customer names.
 
 ## Database Setup
 
