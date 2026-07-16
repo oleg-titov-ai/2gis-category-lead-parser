@@ -14,6 +14,7 @@
 - [ ] Confirm exported CSV headers match the documented schema before CRM import.
 - [ ] Repeat the same demo command and confirm the export structure remains consistent.
 - [ ] Confirm exported filenames do not expose local usernames or customer names.
+- [ ] Confirm the exported row count matches the terminal summary before sharing the file.
 
 ## Database Setup
 
