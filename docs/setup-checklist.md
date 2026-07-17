@@ -13,6 +13,7 @@
 - [ ] Confirm the export directory is writable before starting a live collection run.
 - [ ] Open the exported CSV in a spreadsheet app and verify UTF-8 text renders correctly.
 - [ ] Confirm exported CSV headers match the documented schema before CRM import.
+- [ ] Confirm exported CSV columns remain in the documented order before sharing or importing.
 - [ ] Repeat the same demo command and confirm the export structure remains consistent.
 - [ ] Confirm exported filenames do not expose local usernames or customer names.
 - [ ] Confirm the exported row count matches the terminal summary before sharing the file.
