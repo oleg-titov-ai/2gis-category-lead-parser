@@ -19,6 +19,7 @@
 - [ ] Confirm the exported row count matches the terminal summary before sharing the file.
 - [ ] Verify the CSV delimiter is detected correctly by the target spreadsheet or CRM importer.
 - [ ] Verify commas, quotes, and line breaks inside company fields remain intact after CSV export and re-import.
+- [ ] Confirm missing optional values export as empty fields rather than literal `None` or `null` strings.
 
 ## Database Setup
 
