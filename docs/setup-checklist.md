@@ -20,6 +20,7 @@
 - [ ] Verify the CSV delimiter is detected correctly by the target spreadsheet or CRM importer.
 - [ ] Verify commas, quotes, and line breaks inside company fields remain intact after CSV export and re-import.
 - [ ] Confirm missing optional values export as empty fields rather than literal `None` or `null` strings.
+- [ ] Confirm CSV files end with a newline for consistent command-line processing.
 
 ## Database Setup
 
