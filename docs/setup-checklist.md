@@ -23,6 +23,7 @@
 - [ ] Confirm CSV files end with a newline for consistent command-line processing.
 - [ ] Reopen a demo export using an explicit UTF-8 import setting and confirm no replacement characters appear.
 - [ ] Verify duplicate company IDs do not appear in a single CSV export.
+- [ ] Verify exported files use consistent LF line endings before automated import.
 
 ## Database Setup
 
