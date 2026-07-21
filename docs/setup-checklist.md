@@ -26,6 +26,7 @@
 - [ ] Verify exported files use consistent LF line endings before automated import.
 - [ ] Confirm an unexpectedly large CSV export is reviewed before sharing or importing.
 - [ ] Confirm CSV headers contain no leading or trailing whitespace before import.
+- [ ] Confirm the CSV encoding is detected as UTF-8 before handing the file to an automated importer.
 
 ## Database Setup
 
