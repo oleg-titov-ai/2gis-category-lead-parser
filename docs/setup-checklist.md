@@ -31,6 +31,7 @@
 - [ ] Verify every exported row has the same number of fields as the header before import.
 - [ ] Confirm leading and trailing whitespace in exported text fields is intentional before CRM import.
 - [ ] Verify exported URLs use an expected `http` or `https` scheme before sharing the file.
+- [ ] Confirm the CSV header contains no duplicate column names before import.
 
 ## Database Setup
 
