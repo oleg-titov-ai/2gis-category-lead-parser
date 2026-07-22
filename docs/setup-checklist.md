@@ -28,6 +28,7 @@
 - [ ] Confirm CSV headers contain no leading or trailing whitespace before import.
 - [ ] Confirm the CSV encoding is detected as UTF-8 before handing the file to an automated importer.
 - [ ] Review text fields beginning with `=`, `+`, `-`, or `@` before opening exports in spreadsheet software.
+- [ ] Verify every exported row has the same number of fields as the header before import.
 
 ## Database Setup
 
