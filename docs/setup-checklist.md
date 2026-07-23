@@ -32,6 +32,7 @@
 - [ ] Confirm leading and trailing whitespace in exported text fields is intentional before CRM import.
 - [ ] Verify exported URLs use an expected `http` or `https` scheme before sharing the file.
 - [ ] Confirm the CSV header contains no duplicate column names before import.
+- [ ] Check exported text fields for unexpected control characters before CRM import.
 
 ## Database Setup
 
