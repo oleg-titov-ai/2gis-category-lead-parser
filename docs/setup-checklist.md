@@ -35,6 +35,7 @@
 - [ ] Check exported text fields for unexpected control characters before CRM import.
 - [ ] Reject zero-byte CSV exports before sharing or importing them.
 - [ ] Confirm a new export cannot silently overwrite an unrelated existing CSV file.
+- [ ] Record or review the exported file size so truncated or unexpectedly large outputs are caught early.
 
 ## Database Setup
 
