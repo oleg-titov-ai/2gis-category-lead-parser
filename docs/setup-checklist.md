@@ -33,6 +33,7 @@
 - [ ] Verify exported URLs use an expected `http` or `https` scheme before sharing the file.
 - [ ] Confirm the CSV header contains no duplicate column names before import.
 - [ ] Check exported text fields for unexpected control characters before CRM import.
+- [ ] Reject zero-byte CSV exports before sharing or importing them.
 
 ## Database Setup
 
