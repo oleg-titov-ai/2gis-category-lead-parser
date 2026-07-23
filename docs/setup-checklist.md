@@ -34,6 +34,7 @@
 - [ ] Confirm the CSV header contains no duplicate column names before import.
 - [ ] Check exported text fields for unexpected control characters before CRM import.
 - [ ] Reject zero-byte CSV exports before sharing or importing them.
+- [ ] Confirm a new export cannot silently overwrite an unrelated existing CSV file.
 
 ## Database Setup
 
