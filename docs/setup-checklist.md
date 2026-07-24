@@ -36,6 +36,7 @@
 - [ ] Reject zero-byte CSV exports before sharing or importing them.
 - [ ] Confirm a new export cannot silently overwrite an unrelated existing CSV file.
 - [ ] Record or review the exported file size so truncated or unexpectedly large outputs are caught early.
+- [ ] Record a checksum for any CSV handed off for import so transfer corruption can be detected.
 
 ## Database Setup
 
