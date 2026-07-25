@@ -39,6 +39,7 @@
 - [ ] Record a checksum for any CSV handed off for import so transfer corruption can be detected.
 - [ ] Record the collection date with each shared export so recipients can assess data freshness.
 - [ ] Spot-check the first and last exported records before handing the CSV to another system.
+- [ ] Record the CSV schema version with shared exports when downstream imports depend on a fixed column layout.
 
 ## Database Setup
 
