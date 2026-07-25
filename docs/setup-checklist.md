@@ -38,6 +38,7 @@
 - [ ] Record or review the exported file size so truncated or unexpectedly large outputs are caught early.
 - [ ] Record a checksum for any CSV handed off for import so transfer corruption can be detected.
 - [ ] Record the collection date with each shared export so recipients can assess data freshness.
+- [ ] Spot-check the first and last exported records before handing the CSV to another system.
 
 ## Database Setup
 
