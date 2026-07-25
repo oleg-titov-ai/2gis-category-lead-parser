@@ -335,4 +335,4 @@ Use `.env.example` with placeholders only.
 
 This project intentionally avoids scraping search engine result pages. For production auto-enrichment, connect a permitted search API or a paid 2GIS API plan with contact field permissions.
 
-Maintenance note: verify exported CSV files contain a header row before sharing demo results.
+Maintenance note: compare the exported CSV row count with the run summary before sharing demo results.
