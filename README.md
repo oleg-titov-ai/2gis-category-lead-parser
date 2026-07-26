@@ -338,3 +338,5 @@ This project intentionally avoids scraping search engine result pages. For produ
 Maintenance note: compare the exported CSV row count with the run summary before sharing demo results.
 
 Maintenance note: confirm demo exports contain only sample or intentionally public business data before committing them.
+
+Maintenance note: verify CSV headers stay stable before importing a demo export into another tool.
