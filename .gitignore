@@ -43,3 +43,4 @@ venv/
 .coverage
 coverage.xml
 .hypothesis/
+.pyright/
