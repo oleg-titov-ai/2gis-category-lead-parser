@@ -44,3 +44,4 @@ venv/
 coverage.xml
 .hypothesis/
 .pyright/
+.ruff_cache/
