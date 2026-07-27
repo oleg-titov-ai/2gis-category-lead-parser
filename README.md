@@ -340,3 +340,5 @@ Maintenance note: compare the exported CSV row count with the run summary before
 Maintenance note: confirm demo exports contain only sample or intentionally public business data before committing them.
 
 Maintenance note: verify CSV headers stay stable before importing a demo export into another tool.
+
+Maintenance note: confirm the documented 30-company limit still matches the default runtime configuration.
