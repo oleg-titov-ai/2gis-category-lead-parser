@@ -42,6 +42,7 @@
 - [ ] Record the CSV schema version with shared exports when downstream imports depend on a fixed column layout.
 - [ ] Confirm shared export filenames include a neutral project label and collection date, not customer-identifying text.
 - [ ] Confirm CSV header capitalization matches the documented schema before case-sensitive imports.
+- [ ] Confirm blank trailing rows are removed before importing a CSV into another system.
 
 ## Database Setup
 
