@@ -46,3 +46,4 @@ coverage.xml
 .pyright/
 .ruff_cache/
 .mypy_cache/
+.nox/
