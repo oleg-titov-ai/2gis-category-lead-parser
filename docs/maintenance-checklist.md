@@ -9,3 +9,5 @@ Use a small fixed test category after dependency updates to catch unexpected par
 Confirm empty search results produce a valid header-only export instead of a failed or malformed CSV.
 
 Verify UTF-8 exports preserve non-Latin company names and addresses without replacement characters.
+
+Compare export headers against the documented schema before release so downstream imports are not broken by silent column changes.
