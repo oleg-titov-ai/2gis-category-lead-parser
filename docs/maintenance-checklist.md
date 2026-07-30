@@ -11,3 +11,5 @@ Confirm empty search results produce a valid header-only export instead of a fai
 Verify UTF-8 exports preserve non-Latin company names and addresses without replacement characters.
 
 Compare export headers against the documented schema before release so downstream imports are not broken by silent column changes.
+
+Open one sample export with the documented delimiter settings to confirm commas inside company names or addresses remain correctly quoted.
