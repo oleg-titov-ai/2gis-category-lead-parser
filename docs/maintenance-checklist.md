@@ -7,3 +7,5 @@ Record the parser version and category input used for any portfolio sample so th
 Use a small fixed test category after dependency updates to catch unexpected parsing or column-order changes.
 
 Confirm empty search results produce a valid header-only export instead of a failed or malformed CSV.
+
+Verify UTF-8 exports preserve non-Latin company names and addresses without replacement characters.
