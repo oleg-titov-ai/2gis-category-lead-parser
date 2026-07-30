@@ -13,3 +13,5 @@ Verify UTF-8 exports preserve non-Latin company names and addresses without repl
 Compare export headers against the documented schema before release so downstream imports are not broken by silent column changes.
 
 Open one sample export with the documented delimiter settings to confirm commas inside company names or addresses remain correctly quoted.
+
+Run the same fixed input twice and compare normalized outputs to detect unexpected nondeterministic ordering or duplicate rows.
