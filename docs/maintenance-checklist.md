@@ -19,3 +19,5 @@ Run the same fixed input twice and compare normalized outputs to detect unexpect
 Check one export for duplicate organization identifiers before publishing a portfolio sample.
 
 Confirm generated export filenames use a portable timestamp format without spaces or platform-specific characters.
+
+Verify a cancelled or interrupted run leaves no partial export that could be mistaken for a complete dataset.
