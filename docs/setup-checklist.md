@@ -43,6 +43,7 @@
 - [ ] Confirm shared export filenames include a neutral project label and collection date, not customer-identifying text.
 - [ ] Confirm CSV header capitalization matches the documented schema before case-sensitive imports.
 - [ ] Confirm blank trailing rows are removed before importing a CSV into another system.
+- [ ] Confirm the collection timestamp is present and plausible before treating an export as current.
 
 ## Database Setup
 
