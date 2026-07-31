@@ -17,3 +17,5 @@ Open one sample export with the documented delimiter settings to confirm commas 
 Run the same fixed input twice and compare normalized outputs to detect unexpected nondeterministic ordering or duplicate rows.
 
 Check one export for duplicate organization identifiers before publishing a portfolio sample.
+
+Confirm generated export filenames use a portable timestamp format without spaces or platform-specific characters.
