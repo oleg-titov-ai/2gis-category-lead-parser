@@ -342,3 +342,5 @@ Maintenance note: confirm demo exports contain only sample or intentionally publ
 Maintenance note: verify CSV headers stay stable before importing a demo export into another tool.
 
 Maintenance note: confirm the documented 30-company limit still matches the default runtime configuration.
+
+Maintenance note: ensure generated export filenames remain filesystem-safe when city or category names contain punctuation.
