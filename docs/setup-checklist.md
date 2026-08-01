@@ -44,6 +44,7 @@
 - [ ] Confirm CSV header capitalization matches the documented schema before case-sensitive imports.
 - [ ] Confirm blank trailing rows are removed before importing a CSV into another system.
 - [ ] Confirm the collection timestamp is present and plausible before treating an export as current.
+- [ ] Confirm the export collection date is included in any handoff note so stale files are not mistaken for current data.
 
 ## Database Setup
 
