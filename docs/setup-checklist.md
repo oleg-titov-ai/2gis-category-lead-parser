@@ -46,6 +46,7 @@
 - [ ] Confirm the collection timestamp is present and plausible before treating an export as current.
 - [ ] Confirm the export collection date is included in any handoff note so stale files are not mistaken for current data.
 - [ ] Confirm each shared export identifies the public or demo source used for collection without exposing credentials.
+- [ ] Confirm the export age is reviewed before using it for outreach or CRM import.
 
 ## Database Setup
 
