@@ -47,6 +47,7 @@
 - [ ] Confirm the export collection date is included in any handoff note so stale files are not mistaken for current data.
 - [ ] Confirm each shared export identifies the public or demo source used for collection without exposing credentials.
 - [ ] Confirm the export age is reviewed before using it for outreach or CRM import.
+- [ ] Confirm the source label in the handoff note matches the source recorded in the export metadata.
 
 ## Database Setup
 
