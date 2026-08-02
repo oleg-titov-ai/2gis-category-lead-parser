@@ -23,3 +23,5 @@ Confirm generated export filenames use a portable timestamp format without space
 Verify a cancelled or interrupted run leaves no partial export that could be mistaken for a complete dataset.
 
 Confirm rate-limit or network retries do not duplicate rows in the final export.
+
+Verify numeric and phone fields remain text-safe in spreadsheet applications so leading zeros are not lost.
