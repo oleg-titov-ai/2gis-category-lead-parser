@@ -9,3 +9,4 @@ Use this short checklist before sharing a demo export:
 - Confirm empty-result runs still produce a clear summary without a misleading CSV.
 - Repeat a fixed demo query and confirm stable inputs produce the same normalized columns.
 - Open the export with the documented delimiter and confirm values do not shift between columns.
+- Verify duplicate source records are handled consistently before the final CSV is shared.
