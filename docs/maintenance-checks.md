@@ -11,3 +11,4 @@ Use this short checklist before sharing a demo export:
 - Open the export with the documented delimiter and confirm values do not shift between columns.
 - Verify duplicate source records are handled consistently before the final CSV is shared.
 - Confirm exported filenames use a portable, filesystem-safe timestamp format.
+- Compare exported columns with the documented schema before publishing a new sample.
