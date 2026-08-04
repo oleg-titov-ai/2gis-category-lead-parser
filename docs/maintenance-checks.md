@@ -12,3 +12,4 @@ Use this short checklist before sharing a demo export:
 - Verify duplicate source records are handled consistently before the final CSV is shared.
 - Confirm exported filenames use a portable, filesystem-safe timestamp format.
 - Compare exported columns with the documented schema before publishing a new sample.
+- Confirm the documented sort order is preserved in shared sample exports.
