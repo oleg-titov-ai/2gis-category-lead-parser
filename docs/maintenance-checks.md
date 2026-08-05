@@ -14,3 +14,4 @@ Use this short checklist before sharing a demo export:
 - Compare exported columns with the documented schema before publishing a new sample.
 - Confirm the documented sort order is preserved in shared sample exports.
 - Verify multiline source text cannot break the exported CSV row structure.
+- Confirm commas, quotes, and line breaks are escaped consistently in every exported text field.
