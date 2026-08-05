@@ -25,6 +25,7 @@ real_leads*.json
 real_leads*.csv
 leads_private*.csv
 *_preview.csv
+csv-validation-reports/
 
 # Logs
 *.log
