@@ -26,6 +26,7 @@ real_leads*.csv
 leads_private*.csv
 *_preview.csv
 csv-validation-reports/
+parser-run-reports/
 
 # Logs
 *.log
