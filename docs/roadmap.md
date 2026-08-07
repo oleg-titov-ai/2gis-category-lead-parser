@@ -77,7 +77,8 @@ Add tests for:
 - company normalization;
 - database upsert logic;
 - enrichment source generation;
-- CSV export.
+- CSV export;
+- CSV export/import round-trip consistency.
 
 ### 7. Deployment
 
