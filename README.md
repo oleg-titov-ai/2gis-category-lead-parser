@@ -344,3 +344,5 @@ Maintenance note: verify CSV headers stay stable before importing a demo export 
 Maintenance note: confirm the documented 30-company limit still matches the default runtime configuration.
 
 Maintenance note: ensure generated export filenames remain filesystem-safe when city or category names contain punctuation.
+
+Maintenance note: open demo CSV exports with UTF-8 decoding before publication to catch encoding regressions.
