@@ -49,7 +49,8 @@ Add additional export formats:
 - automated validation of required columns before export;
 - explicit UTF-8 encoding checks for exported text fields;
 - a small regression fixture for verifying column order and headers;
-- safe filename normalization for city and category values.
+- safe filename normalization for city and category values;
+- a documented schema version for exported columns so downstream imports can detect incompatible changes.
 
 ### 4. Verification Dashboard
 
