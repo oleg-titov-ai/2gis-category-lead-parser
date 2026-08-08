@@ -51,6 +51,7 @@
 - [ ] Confirm the export timestamp is not in the future relative to the handoff date.
 - [ ] Compare the parsed CSV row count with the expected data-record count after reopening the file.
 - [ ] Verify exports contain no completely empty data rows between valid records.
+- [ ] Confirm the export timestamp is no older than the freshness window expected by the downstream workflow.
 
 ## Database Setup
 
