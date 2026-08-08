@@ -29,6 +29,8 @@ git status
 git diff --cached
 ```
 
+Before publishing an export, open the CSV once and confirm it contains no unintended local paths, internal IDs, or private contact data.
+
 ## Secret Search
 
 ```bash
