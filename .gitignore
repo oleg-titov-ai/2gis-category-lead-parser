@@ -28,6 +28,7 @@ leads_private*.csv
 csv-validation-reports/
 parser-run-reports/
 import-dry-runs/
+csv-schema-snapshots/
 
 # Logs
 *.log
