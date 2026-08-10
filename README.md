@@ -346,3 +346,5 @@ Maintenance note: confirm the documented 30-company limit still matches the defa
 Maintenance note: ensure generated export filenames remain filesystem-safe when city or category names contain punctuation.
 
 Maintenance note: open demo CSV exports with UTF-8 decoding before publication to catch encoding regressions.
+
+Maintenance note: confirm demo exports do not include columns that are populated only by private enrichment sources.
