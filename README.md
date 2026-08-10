@@ -348,3 +348,5 @@ Maintenance note: ensure generated export filenames remain filesystem-safe when 
 Maintenance note: open demo CSV exports with UTF-8 decoding before publication to catch encoding regressions.
 
 Maintenance note: confirm demo exports do not include columns that are populated only by private enrichment sources.
+
+Maintenance note: verify a demo export preserves deterministic column order so portfolio examples remain reproducible.
