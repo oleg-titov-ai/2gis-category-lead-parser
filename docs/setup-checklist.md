@@ -52,6 +52,7 @@
 - [ ] Compare the parsed CSV row count with the expected data-record count after reopening the file.
 - [ ] Verify exports contain no completely empty data rows between valid records.
 - [ ] Confirm the export timestamp is no older than the freshness window expected by the downstream workflow.
+- [ ] Confirm a demo export can be regenerated from documented inputs without manual data edits.
 
 ## Database Setup
 
