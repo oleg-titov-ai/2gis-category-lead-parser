@@ -350,3 +350,5 @@ Maintenance note: open demo CSV exports with UTF-8 decoding before publication t
 Maintenance note: confirm demo exports do not include columns that are populated only by private enrichment sources.
 
 Maintenance note: verify a demo export preserves deterministic column order so portfolio examples remain reproducible.
+
+Maintenance note: regenerate portfolio CSV examples after schema changes so screenshots and sample output stay in sync.
