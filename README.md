@@ -197,10 +197,7 @@ Collect 30 real companies with a configured 1 second delay between API calls:
 
 ```bash
 python src/main.py \
-  --city "Москва" \
-  --category "Металлообработка" \
-  --limit 30 \
-  --save-db
+  --city "Москва" --category "Металлообработка" --limit 30 --save-db
 ```
 
 Example output:
@@ -358,3 +355,5 @@ Maintenance note: keep demo export filenames stable when referenced from documen
 Maintenance note: confirm published demo exports were regenerated from the current schema rather than an older local snapshot.
 
 Maintenance note: verify demo CSV files open cleanly with the documented delimiter and encoding before portfolio publication.
+
+Maintenance note: verify an empty-result demo run still produces a valid header-only CSV and a clear zero-row summary.
