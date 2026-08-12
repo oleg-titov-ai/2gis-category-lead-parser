@@ -356,3 +356,5 @@ Maintenance note: regenerate portfolio CSV examples after schema changes so scre
 Maintenance note: keep demo export filenames stable when referenced from documentation or screenshots.
 
 Maintenance note: confirm published demo exports were regenerated from the current schema rather than an older local snapshot.
+
+Maintenance note: verify demo CSV files open cleanly with the documented delimiter and encoding before portfolio publication.
