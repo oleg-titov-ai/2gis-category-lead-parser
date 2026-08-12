@@ -354,3 +354,5 @@ Maintenance note: verify a demo export preserves deterministic column order so p
 Maintenance note: regenerate portfolio CSV examples after schema changes so screenshots and sample output stay in sync.
 
 Maintenance note: keep demo export filenames stable when referenced from documentation or screenshots.
+
+Maintenance note: confirm published demo exports were regenerated from the current schema rather than an older local snapshot.
