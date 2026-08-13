@@ -54,3 +54,6 @@ coverage.xml
 .nox/
 .cache/
 dist/
+
+# Local deduplication diagnostics
+deduplication-diagnostics/
