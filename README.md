@@ -357,3 +357,5 @@ Maintenance note: confirm published demo exports were regenerated from the curre
 Maintenance note: verify demo CSV files open cleanly with the documented delimiter and encoding before portfolio publication.
 
 Maintenance note: verify an empty-result demo run still produces a valid header-only CSV and a clear zero-row summary.
+
+Maintenance note: verify deduplication still treats normalized company names and source IDs consistently across repeated demo runs.
