@@ -35,6 +35,8 @@ Also confirm demo exports do not include hidden enrichment columns that are not 
 
 Confirm shared demo exports identify only the intended public/demo source and do not expose internal enrichment source metadata.
 
+Record which demo command produced a published CSV so portfolio exports remain reproducible and clearly separate from production data.
+
 ## Secret Search
 
 ```bash
