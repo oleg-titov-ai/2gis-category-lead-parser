@@ -54,6 +54,7 @@
 - [ ] Confirm the export timestamp is no older than the freshness window expected by the downstream workflow.
 - [ ] Confirm a demo export can be regenerated from documented inputs without manual data edits.
 - [ ] Confirm a regenerated demo export preserves the same header and row ordering when the input dataset is unchanged.
+- [ ] Record the parser version or source commit alongside a shared demo export so its provenance can be reproduced later.
 
 ## Database Setup
 
