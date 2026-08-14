@@ -33,6 +33,8 @@ Before publishing an export, open the CSV once and confirm it contains no uninte
 
 Also confirm demo exports do not include hidden enrichment columns that are not documented for public use.
 
+Confirm shared demo exports identify only the intended public/demo source and do not expose internal enrichment source metadata.
+
 ## Secret Search
 
 ```bash
