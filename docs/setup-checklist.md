@@ -57,6 +57,7 @@
 - [ ] Record the parser version or source commit alongside a shared demo export so its provenance can be reproduced later.
 - [ ] Confirm the documented demo command still reproduces the published sample export after dependency updates.
 - [ ] Confirm any shared export handoff note states the expected freshness window so recipients know when to regenerate it.
+- [ ] Verify the checksum recorded in the handoff note matches the final CSV after any rename or transfer.
 
 ## Database Setup
 
