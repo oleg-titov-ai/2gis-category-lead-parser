@@ -37,6 +37,8 @@ Confirm shared demo exports identify only the intended public/demo source and do
 
 Record which demo command produced a published CSV so portfolio exports remain reproducible and clearly separate from production data.
 
+Confirm any committed demo CSV uses a documented, stable column set so downstream portfolio examples remain reproducible.
+
 ## Secret Search
 
 ```bash
