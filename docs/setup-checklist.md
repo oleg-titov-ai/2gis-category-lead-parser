@@ -56,6 +56,7 @@
 - [ ] Confirm a regenerated demo export preserves the same header and row ordering when the input dataset is unchanged.
 - [ ] Record the parser version or source commit alongside a shared demo export so its provenance can be reproduced later.
 - [ ] Confirm the documented demo command still reproduces the published sample export after dependency updates.
+- [ ] Confirm any shared export handoff note states the expected freshness window so recipients know when to regenerate it.
 
 ## Database Setup
 
