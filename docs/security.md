@@ -39,6 +39,8 @@ Record which demo command produced a published CSV so portfolio exports remain r
 
 Confirm any committed demo CSV uses a documented, stable column set so downstream portfolio examples remain reproducible.
 
+Confirm published source URLs point only to intentionally public pages and do not expose private enrichment endpoints or query tokens.
+
 ## Secret Search
 
 ```bash
