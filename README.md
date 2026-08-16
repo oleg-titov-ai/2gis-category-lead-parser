@@ -361,3 +361,5 @@ Maintenance note: verify an empty-result demo run still produces a valid header-
 Maintenance note: verify deduplication still treats normalized company names and source IDs consistently across repeated demo runs.
 
 Maintenance note: record the demo run parameters used for a published CSV so the portfolio export can be reproduced from the same inputs.
+
+Maintenance note: verify manually verified contacts retain their source URL and verification flag after a CSV export/import round trip.
