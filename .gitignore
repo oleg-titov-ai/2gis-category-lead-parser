@@ -29,6 +29,7 @@ csv-validation-reports/
 parser-run-reports/
 import-dry-runs/
 csv-schema-snapshots/
+export-integrity-reports/
 
 # Logs
 *.log
