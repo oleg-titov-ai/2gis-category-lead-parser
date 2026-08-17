@@ -363,3 +363,5 @@ Maintenance note: verify deduplication still treats normalized company names and
 Maintenance note: record the demo run parameters used for a published CSV so the portfolio export can be reproduced from the same inputs.
 
 Maintenance note: verify manually verified contacts retain their source URL and verification flag after a CSV export/import round trip.
+
+Maintenance note: record the collection date for published demo exports so portfolio reviewers can distinguish current examples from stale source snapshots.
