@@ -41,6 +41,8 @@ Confirm any committed demo CSV uses a documented, stable column set so downstrea
 
 Confirm published source URLs point only to intentionally public pages and do not expose private enrichment endpoints or query tokens.
 
+Confirm each published demo export can be traced to a documented public/demo source without including private lookup metadata.
+
 ## Secret Search
 
 ```bash
