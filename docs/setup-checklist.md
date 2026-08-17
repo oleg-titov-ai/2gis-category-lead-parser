@@ -60,6 +60,7 @@
 - [ ] Verify the checksum recorded in the handoff note matches the final CSV after any rename or transfer.
 - [ ] Confirm schema version, parser commit, collection date, and checksum refer to the same final CSV artifact before handoff.
 - [ ] Reopen the final handoff CSV after transfer and verify its checksum and row count still match the recorded values.
+- [ ] Confirm the final handoff note references exactly one CSV artifact so recipients cannot confuse superseded exports with the current file.
 
 ## Database Setup
 
