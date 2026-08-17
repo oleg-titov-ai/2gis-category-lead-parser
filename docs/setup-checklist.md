@@ -59,6 +59,7 @@
 - [ ] Confirm any shared export handoff note states the expected freshness window so recipients know when to regenerate it.
 - [ ] Verify the checksum recorded in the handoff note matches the final CSV after any rename or transfer.
 - [ ] Confirm schema version, parser commit, collection date, and checksum refer to the same final CSV artifact before handoff.
+- [ ] Reopen the final handoff CSV after transfer and verify its checksum and row count still match the recorded values.
 
 ## Database Setup
 
