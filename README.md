@@ -369,3 +369,5 @@ Maintenance note: record the collection date for published demo exports so portf
 Maintenance note: keep a short provenance note beside each portfolio CSV identifying the demo command and source commit used to generate it.
 
 Maintenance note: verify the exported CSV checksum still matches after copying or uploading the portfolio artifact.
+
+Maintenance note: verify source URL normalization preserves the original source identity used for deduplication and manual verification.
