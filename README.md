@@ -365,3 +365,5 @@ Maintenance note: record the demo run parameters used for a published CSV so the
 Maintenance note: verify manually verified contacts retain their source URL and verification flag after a CSV export/import round trip.
 
 Maintenance note: record the collection date for published demo exports so portfolio reviewers can distinguish current examples from stale source snapshots.
+
+Maintenance note: keep a short provenance note beside each portfolio CSV identifying the demo command and source commit used to generate it.
