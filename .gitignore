@@ -30,6 +30,7 @@ parser-run-reports/
 import-dry-runs/
 csv-schema-snapshots/
 export-integrity-reports/
+csv-handoff-checks/
 
 # Logs
 *.log
