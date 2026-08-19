@@ -373,3 +373,5 @@ Maintenance note: verify the exported CSV checksum still matches after copying o
 Maintenance note: verify source URL normalization preserves the original source identity used for deduplication and manual verification.
 
 Maintenance note: before sharing a portfolio CSV, verify its recorded row count, checksum, collection date, and source commit all describe that exact file.
+
+Maintenance note: confirm the published CSV filename and provenance note refer to the same export artifact before sharing it.
