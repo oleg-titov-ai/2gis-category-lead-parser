@@ -371,3 +371,5 @@ Maintenance note: keep a short provenance note beside each portfolio CSV identif
 Maintenance note: verify the exported CSV checksum still matches after copying or uploading the portfolio artifact.
 
 Maintenance note: verify source URL normalization preserves the original source identity used for deduplication and manual verification.
+
+Maintenance note: before sharing a portfolio CSV, verify its recorded row count, checksum, collection date, and source commit all describe that exact file.
