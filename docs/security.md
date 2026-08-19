@@ -43,6 +43,8 @@ Confirm published source URLs point only to intentionally public pages and do no
 
 Confirm each published demo export can be traced to a documented public/demo source without including private lookup metadata.
 
+Use neutral export filenames that do not contain client names, account names, or local usernames.
+
 ## Secret Search
 
 ```bash
