@@ -4,3 +4,4 @@
 - 2026-08-20: Keep a documented empty-result check so zero-match runs still produce a valid header-only CSV with the expected schema and no stale rows from prior exports.
 - 2026-08-20: Keep portfolio export samples limited to documented public/demo source fields so private enrichment columns cannot appear accidentally in shared CSV files.
 - 2026-08-20: Verify documented CSV encoding and delimiter settings remain stable so portfolio samples open consistently across common spreadsheet tools.
+- 2026-08-21: Verify normalization preserves a stable source identifier so repeated demo runs deduplicate the same listing consistently without relying on private enrichment data.
