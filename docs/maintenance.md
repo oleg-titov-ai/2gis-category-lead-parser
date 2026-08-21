@@ -5,3 +5,4 @@
 - 2026-08-20: Keep portfolio export samples limited to documented public/demo source fields so private enrichment columns cannot appear accidentally in shared CSV files.
 - 2026-08-20: Verify documented CSV encoding and delimiter settings remain stable so portfolio samples open consistently across common spreadsheet tools.
 - 2026-08-21: Verify normalization preserves a stable source identifier so repeated demo runs deduplicate the same listing consistently without relying on private enrichment data.
+- 2026-08-21: Compare the current demo export headers with the documented schema after parser changes so renamed or removed fields cannot silently drift into portfolio CSV examples.
