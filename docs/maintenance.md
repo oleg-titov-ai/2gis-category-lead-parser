@@ -6,3 +6,4 @@
 - 2026-08-20: Verify documented CSV encoding and delimiter settings remain stable so portfolio samples open consistently across common spreadsheet tools.
 - 2026-08-21: Verify normalization preserves a stable source identifier so repeated demo runs deduplicate the same listing consistently without relying on private enrichment data.
 - 2026-08-21: Compare the current demo export headers with the documented schema after parser changes so renamed or removed fields cannot silently drift into portfolio CSV examples.
+- 2026-08-21: Verify a regenerated demo CSV preserves deterministic column order so diffs remain reviewable and portfolio updates do not show noisy schema churn.
