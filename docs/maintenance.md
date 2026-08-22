@@ -10,3 +10,4 @@
 - 2026-08-21: Recheck documented text encoding for non-Latin business names so portfolio CSV examples preserve readable names without altering source identifiers.
 - 2026-08-22: Keep a small synthetic export fixture documented so CSV formatting and deduplication changes can be reviewed without publishing real lead data.
 - 2026-08-22: Regenerate the documented synthetic fixture twice after parser changes and confirm row order, headers, and checksum remain stable when the input is unchanged.
+- 2026-08-22: Keep synthetic export provenance metadata separate from row data and verify it cannot introduce local filesystem paths, account identifiers, or private enrichment endpoints.
