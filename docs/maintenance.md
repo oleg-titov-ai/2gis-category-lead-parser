@@ -8,3 +8,4 @@
 - 2026-08-21: Compare the current demo export headers with the documented schema after parser changes so renamed or removed fields cannot silently drift into portfolio CSV examples.
 - 2026-08-21: Verify a regenerated demo CSV preserves deterministic column order so diffs remain reviewable and portfolio updates do not show noisy schema churn.
 - 2026-08-21: Recheck documented text encoding for non-Latin business names so portfolio CSV examples preserve readable names without altering source identifiers.
+- 2026-08-22: Keep a small synthetic export fixture documented so CSV formatting and deduplication changes can be reviewed without publishing real lead data.
