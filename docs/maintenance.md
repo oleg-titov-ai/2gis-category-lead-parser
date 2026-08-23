@@ -12,3 +12,4 @@
 - 2026-08-22: Regenerate the documented synthetic fixture twice after parser changes and confirm row order, headers, and checksum remain stable when the input is unchanged.
 - 2026-08-22: Keep synthetic export provenance metadata separate from row data and verify it cannot introduce local filesystem paths, account identifiers, or private enrichment endpoints.
 - 2026-08-22: Keep the documented synthetic export sort order explicit so repeated runs remain diff-friendly when source records arrive in a different input order.
+- 2026-08-23: Validate one synthetic row against the documented CSV schema after parser changes so field type or formatting drift is caught before a portfolio export is regenerated.
