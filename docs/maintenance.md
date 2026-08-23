@@ -13,3 +13,4 @@
 - 2026-08-22: Keep synthetic export provenance metadata separate from row data and verify it cannot introduce local filesystem paths, account identifiers, or private enrichment endpoints.
 - 2026-08-22: Keep the documented synthetic export sort order explicit so repeated runs remain diff-friendly when source records arrive in a different input order.
 - 2026-08-23: Validate one synthetic row against the documented CSV schema after parser changes so field type or formatting drift is caught before a portfolio export is regenerated.
+- 2026-08-23: Verify duplicate synthetic source records collapse to one exported row while preserving the documented canonical source identifier and field values.
