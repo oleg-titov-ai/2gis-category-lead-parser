@@ -18,3 +18,4 @@
 - 2026-08-23: Re-run the same synthetic fixture after a parser maintenance change and verify row count, canonical IDs, column order, and checksum remain stable when output semantics are unchanged.
 - 2026-08-24: Verify a synthetic record with missing optional fields still exports with the documented column set and deterministic blanks, without shifting values into adjacent columns.
 - 2026-08-24: Keep one synthetic CSV check with embedded commas and quotes so escaping remains valid without exposing real business records.
+- 2026-08-24: Keep CSV line-ending behavior consistent across platforms so regenerating the same synthetic fixture does not produce noisy portfolio diffs on macOS, Linux, or Windows.
