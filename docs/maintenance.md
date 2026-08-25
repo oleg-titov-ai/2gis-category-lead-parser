@@ -22,3 +22,4 @@
 - 2026-08-24: Keep one synthetic check for duplicate records with different input ordering and verify the canonical exported row remains deterministic.
 - 2026-08-25: Keep one synthetic export check for leading and trailing whitespace in source text so normalization is deterministic without changing the canonical source identifier or column layout.
 - 2026-08-25: Verify explicit null-like synthetic values are exported consistently as documented blanks rather than literal internal sentinel strings or shifted columns.
+- 2026-08-25: Verify a regenerated synthetic CSV ends with the documented newline convention so checksum changes reflect content changes rather than editor-specific file termination.
