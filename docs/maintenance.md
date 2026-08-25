@@ -21,3 +21,4 @@
 - 2026-08-24: Keep CSV line-ending behavior consistent across platforms so regenerating the same synthetic fixture does not produce noisy portfolio diffs on macOS, Linux, or Windows.
 - 2026-08-24: Keep one synthetic check for duplicate records with different input ordering and verify the canonical exported row remains deterministic.
 - 2026-08-25: Keep one synthetic export check for leading and trailing whitespace in source text so normalization is deterministic without changing the canonical source identifier or column layout.
+- 2026-08-25: Verify explicit null-like synthetic values are exported consistently as documented blanks rather than literal internal sentinel strings or shifted columns.
