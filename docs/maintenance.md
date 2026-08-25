@@ -20,3 +20,4 @@
 - 2026-08-24: Keep one synthetic CSV check with embedded commas and quotes so escaping remains valid without exposing real business records.
 - 2026-08-24: Keep CSV line-ending behavior consistent across platforms so regenerating the same synthetic fixture does not produce noisy portfolio diffs on macOS, Linux, or Windows.
 - 2026-08-24: Keep one synthetic check for duplicate records with different input ordering and verify the canonical exported row remains deterministic.
+- 2026-08-25: Keep one synthetic export check for leading and trailing whitespace in source text so normalization is deterministic without changing the canonical source identifier or column layout.
