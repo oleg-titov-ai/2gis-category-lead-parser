@@ -25,3 +25,4 @@
 - 2026-08-25: Verify a regenerated synthetic CSV ends with the documented newline convention so checksum changes reflect content changes rather than editor-specific file termination.
 - 2026-08-25: Keep the documented synthetic sort key stable and explicit so equivalent normalized records cannot reorder unpredictably when non-key fields change.
 - 2026-08-26: Keep one synthetic duplicate case that differs only in URL tracking parameters so canonicalization remains deterministic without leaking or preserving irrelevant query metadata.
+- 2026-08-26: Keep one synthetic mixed-case URL case so canonicalization remains stable without changing the documented source identifier or deduplication result.
