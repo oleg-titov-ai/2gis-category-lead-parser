@@ -28,3 +28,4 @@
 - 2026-08-26: Keep one synthetic mixed-case URL case so canonicalization remains stable without changing the documented source identifier or deduplication result.
 - 2026-08-26: Verify a synthetic export regenerated after a no-op maintenance change keeps the same schema, canonical IDs, ordering, row count, and checksum.
 - 2026-08-26: Verify equivalent synthetic URLs with reordered query parameters normalize to the same documented canonical source without changing the exported source ID.
+- 2026-08-27: Keep one synthetic source-name case containing tabs and repeated internal whitespace so normalization remains deterministic without altering canonical IDs or CSV column alignment.
