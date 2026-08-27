@@ -30,3 +30,4 @@
 - 2026-08-26: Verify equivalent synthetic URLs with reordered query parameters normalize to the same documented canonical source without changing the exported source ID.
 - 2026-08-27: Keep one synthetic source-name case containing tabs and repeated internal whitespace so normalization remains deterministic without altering canonical IDs or CSV column alignment.
 - 2026-08-27: Verify Unicode normalization of equivalent synthetic business names is deterministic and does not create duplicate canonical rows or change stable source identifiers.
+- 2026-08-27: Verify semantically equivalent synthetic rows that differ only by documented normalization rules produce the same canonical ID and deterministic exported values.
