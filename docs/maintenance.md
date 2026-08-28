@@ -33,3 +33,4 @@
 - 2026-08-27: Verify semantically equivalent synthetic rows that differ only by documented normalization rules produce the same canonical ID and deterministic exported values.
 - 2026-08-27: Verify CSV examples document whether fields are raw or normalized so portfolio reviewers can interpret exported values without inferring hidden enrichment or transformation steps.
 - 2026-08-28: Keep one synthetic URL pair that differs only by an optional trailing slash and verify canonicalization produces the same source identity without changing unrelated query or path data.
+- 2026-08-28: Keep one synthetic URL pair that differs only by a client-side fragment and verify canonicalization ignores the fragment without changing the stable source identity or exported row.
