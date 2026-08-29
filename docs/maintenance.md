@@ -35,3 +35,4 @@
 - 2026-08-28: Keep one synthetic URL pair that differs only by an optional trailing slash and verify canonicalization produces the same source identity without changing unrelated query or path data.
 - 2026-08-28: Keep one synthetic URL pair that differs only by a client-side fragment and verify canonicalization ignores the fragment without changing the stable source identity or exported row.
 - 2026-08-28: Keep one synthetic URL pair with equivalent percent-encoded path text and verify canonicalization does not split one source into duplicate portfolio rows.
+- 2026-08-29: Keep one synthetic export case with an empty source URL and verify the row is handled deterministically without inventing provenance or reusing another record's canonical identifier.
