@@ -36,3 +36,4 @@
 - 2026-08-28: Keep one synthetic URL pair that differs only by a client-side fragment and verify canonicalization ignores the fragment without changing the stable source identity or exported row.
 - 2026-08-28: Keep one synthetic URL pair with equivalent percent-encoded path text and verify canonicalization does not split one source into duplicate portfolio rows.
 - 2026-08-29: Keep one synthetic export case with an empty source URL and verify the row is handled deterministically without inventing provenance or reusing another record's canonical identifier.
+- 2026-08-29: Keep synthetic export provenance notes limited to public source context, parser version, and generation date so portfolio artifacts remain reproducible without exposing local environment details.
