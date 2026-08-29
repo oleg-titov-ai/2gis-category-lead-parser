@@ -38,3 +38,4 @@
 - 2026-08-29: Keep one synthetic export case with an empty source URL and verify the row is handled deterministically without inventing provenance or reusing another record's canonical identifier.
 - 2026-08-29: Keep synthetic export provenance notes limited to public source context, parser version, and generation date so portfolio artifacts remain reproducible without exposing local environment details.
 - 2026-08-29: Keep one synthetic CSV case with multiline text so quoting remains standards-compliant and portfolio exports stay readable without exposing real lead content.
+- 2026-08-29: Verify missing optional synthetic text fields serialize consistently as empty CSV cells rather than whitespace or internal sentinel values, keeping checksums and diffs deterministic.
