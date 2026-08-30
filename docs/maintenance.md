@@ -40,3 +40,4 @@
 - 2026-08-29: Keep one synthetic CSV case with multiline text so quoting remains standards-compliant and portfolio exports stay readable without exposing real lead content.
 - 2026-08-29: Verify missing optional synthetic text fields serialize consistently as empty CSV cells rather than whitespace or internal sentinel values, keeping checksums and diffs deterministic.
 - 2026-08-30: Verify the synthetic export header row is byte-for-byte stable for an unchanged documented schema so portfolio checksum changes cannot be caused by incidental header formatting or ordering drift.
+- 2026-08-30: Keep a simple synthetic schema fingerprint based only on ordered header names so reviewers can detect schema drift without storing row data or private source metadata.
