@@ -39,3 +39,4 @@
 - 2026-08-29: Keep synthetic export provenance notes limited to public source context, parser version, and generation date so portfolio artifacts remain reproducible without exposing local environment details.
 - 2026-08-29: Keep one synthetic CSV case with multiline text so quoting remains standards-compliant and portfolio exports stay readable without exposing real lead content.
 - 2026-08-29: Verify missing optional synthetic text fields serialize consistently as empty CSV cells rather than whitespace or internal sentinel values, keeping checksums and diffs deterministic.
+- 2026-08-30: Verify the synthetic export header row is byte-for-byte stable for an unchanged documented schema so portfolio checksum changes cannot be caused by incidental header formatting or ordering drift.
