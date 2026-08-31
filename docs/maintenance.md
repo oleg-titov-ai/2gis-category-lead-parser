@@ -43,3 +43,4 @@
 - 2026-08-30: Keep a simple synthetic schema fingerprint based only on ordered header names so reviewers can detect schema drift without storing row data or private source metadata.
 - 2026-08-30: Keep one synthetic CSV check for leading-zero text identifiers so spreadsheet-oriented exports do not silently coerce stable source values into numbers.
 - 2026-08-30: Verify documented text identifiers remain quoted or otherwise clearly typed in spreadsheet-oriented examples so leading zeros survive copy, import, and re-export unchanged.
+- 2026-08-31: Verify a synthetic export containing Unicode, commas, quotes, and leading-zero identifiers round-trips through the documented CSV settings without schema or value drift.
