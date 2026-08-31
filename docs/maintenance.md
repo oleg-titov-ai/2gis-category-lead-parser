@@ -46,3 +46,4 @@
 - 2026-08-31: Verify a synthetic export containing Unicode, commas, quotes, and leading-zero identifiers round-trips through the documented CSV settings without schema or value drift.
 - 2026-08-31: Verify a header-only synthetic export uses the same encoding, delimiter, quoting, and newline conventions as non-empty portfolio exports.
 - 2026-08-31: Verify two consecutive header-only synthetic exports are byte-identical for an unchanged schema, confirming empty-result artifacts remain reproducible and diff-friendly.
+- 2026-08-31: Verify a synthetic export with reordered input records preserves the documented deterministic output order and checksum when normalized row content is unchanged.
