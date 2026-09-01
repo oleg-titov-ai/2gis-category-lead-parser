@@ -47,3 +47,4 @@
 - 2026-08-31: Verify a header-only synthetic export uses the same encoding, delimiter, quoting, and newline conventions as non-empty portfolio exports.
 - 2026-08-31: Verify two consecutive header-only synthetic exports are byte-identical for an unchanged schema, confirming empty-result artifacts remain reproducible and diff-friendly.
 - 2026-08-31: Verify a synthetic export with reordered input records preserves the documented deterministic output order and checksum when normalized row content is unchanged.
+- 2026-09-01: Verify synthetic export documentation states the expected UTF-8 encoding explicitly so portfolio CSV samples remain portable without relying on spreadsheet auto-detection.
