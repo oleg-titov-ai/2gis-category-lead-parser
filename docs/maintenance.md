@@ -50,3 +50,4 @@
 - 2026-09-01: Verify synthetic export documentation states the expected UTF-8 encoding explicitly so portfolio CSV samples remain portable without relying on spreadsheet auto-detection.
 - 2026-09-02: Verify a synthetic CSV opened and re-saved with the documented spreadsheet workflow preserves header order, text identifiers, and UTF-8 content without introducing a BOM or type coercion.
 - 2026-09-03: Verify a synthetic row containing formula-like text exports as literal data rather than spreadsheet-executable content, while preserving deterministic CSV quoting and values.
+- 2026-09-03: Verify a synthetic field beginning with a plus, minus, or at-sign remains literal text in the documented spreadsheet workflow and does not alter the canonical exported value.
