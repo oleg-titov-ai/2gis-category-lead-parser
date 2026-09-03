@@ -375,3 +375,5 @@ Maintenance note: verify source URL normalization preserves the original source 
 Maintenance note: before sharing a portfolio CSV, verify its recorded row count, checksum, collection date, and source commit all describe that exact file.
 
 Maintenance note: confirm the published CSV filename and provenance note refer to the same export artifact before sharing it.
+
+Maintenance note: verify formula-like synthetic values remain literal text after CSV export and spreadsheet re-import.
