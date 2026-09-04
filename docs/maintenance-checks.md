@@ -15,3 +15,4 @@ Use this short checklist before sharing a demo export:
 - Confirm the documented sort order is preserved in shared sample exports.
 - Verify multiline source text cannot break the exported CSV row structure.
 - Confirm commas, quotes, and line breaks are escaped consistently in every exported text field.
+- Confirm shared UTF-8 samples use the documented BOM policy so spreadsheet round-trips do not create noisy byte-level diffs.
