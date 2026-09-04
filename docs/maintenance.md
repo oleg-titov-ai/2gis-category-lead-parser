@@ -52,3 +52,4 @@
 - 2026-09-03: Verify a synthetic row containing formula-like text exports as literal data rather than spreadsheet-executable content, while preserving deterministic CSV quoting and values.
 - 2026-09-03: Verify a synthetic field beginning with a plus, minus, or at-sign remains literal text in the documented spreadsheet workflow and does not alter the canonical exported value.
 - 2026-09-03: Verify a synthetic text field protected for spreadsheet safety round-trips without retaining a helper tab or apostrophe as part of the canonical exported value.
+- 2026-09-04: Verify a synthetic field containing an embedded tab remains quoted data and preserves the canonical text value without shifting CSV columns during spreadsheet round-trip.
