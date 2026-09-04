@@ -54,3 +54,4 @@
 - 2026-09-03: Verify a synthetic text field protected for spreadsheet safety round-trips without retaining a helper tab or apostrophe as part of the canonical exported value.
 - 2026-09-04: Verify a synthetic field containing an embedded tab remains quoted data and preserves the canonical text value without shifting CSV columns during spreadsheet round-trip.
 - 2026-09-04: Verify a synthetic field containing a line break remains one quoted CSV cell and round-trips without changing row count or column alignment.
+- 2026-09-04: Verify synthetic text containing non-printing control characters is normalized or rejected deterministically before CSV export, without changing adjacent fields or canonical identifiers.
