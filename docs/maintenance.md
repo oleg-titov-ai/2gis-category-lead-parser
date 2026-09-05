@@ -58,3 +58,4 @@
 - 2026-09-05: Verify a synthetic field containing only whitespace normalizes to the documented empty-cell representation without changing row identity, column count, or deterministic ordering.
 - 2026-09-05: Verify a synthetic text field containing a semicolon remains ordinary cell content under the documented comma-delimited export and does not alter column count or canonical values.
 - 2026-09-05: Verify a synthetic date-like text value round-trips through the documented spreadsheet workflow as text rather than being silently converted to a locale-specific date or number.
+- 2026-09-05: Verify synthetic text containing a non-breaking space is normalized or preserved according to the documented policy without changing column count, canonical identifiers, or deterministic row ordering.
