@@ -61,3 +61,4 @@
 - 2026-09-05: Verify synthetic text containing a non-breaking space is normalized or preserved according to the documented policy without changing column count, canonical identifiers, or deterministic row ordering.
 - 2026-09-06: Verify a synthetic identifier that looks like scientific notation (for example, "1E10") round-trips through the documented spreadsheet workflow as text without numeric coercion or canonical-value drift.
 - 2026-09-06: Verify a synthetic decimal-looking text value round-trips as text under different spreadsheet locale settings, without comma/dot conversion or canonical-value drift.
+- 2026-09-06: Verify synthetic supplementary-plane Unicode text, such as emoji, round-trips through the documented UTF-8 CSV workflow without replacement characters, schema drift, or canonical-value changes.
