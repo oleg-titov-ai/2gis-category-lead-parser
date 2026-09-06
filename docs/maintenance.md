@@ -60,3 +60,4 @@
 - 2026-09-05: Verify a synthetic date-like text value round-trips through the documented spreadsheet workflow as text rather than being silently converted to a locale-specific date or number.
 - 2026-09-05: Verify synthetic text containing a non-breaking space is normalized or preserved according to the documented policy without changing column count, canonical identifiers, or deterministic row ordering.
 - 2026-09-06: Verify a synthetic identifier that looks like scientific notation (for example, "1E10") round-trips through the documented spreadsheet workflow as text without numeric coercion or canonical-value drift.
+- 2026-09-06: Verify a synthetic decimal-looking text value round-trips as text under different spreadsheet locale settings, without comma/dot conversion or canonical-value drift.
