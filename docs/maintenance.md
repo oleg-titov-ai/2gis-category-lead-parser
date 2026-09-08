@@ -64,3 +64,4 @@
 - 2026-09-06: Verify synthetic supplementary-plane Unicode text, such as emoji, round-trips through the documented UTF-8 CSV workflow without replacement characters, schema drift, or canonical-value changes.
 - 2026-09-06: Verify a synthetic numeric-looking identifier longer than common spreadsheet precision limits round-trips as text without truncation, rounding, or canonical-value drift.
 - 2026-09-07: Verify equivalent synthetic internationalized URLs normalize deterministically across Unicode and punycode host representations without splitting one source into duplicate portfolio rows.
+- 2026-09-08: Verify a synthetic UTF-8 CSV with and without an optional BOM is handled according to the documented import policy without changing headers, canonical values, row count, or deduplication identity.
