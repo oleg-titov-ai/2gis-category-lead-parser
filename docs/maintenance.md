@@ -69,3 +69,4 @@
 - 2026-09-08: Verify a synthetic UTF-8 CSV with and without an optional BOM is handled according to the documented import policy without changing headers, canonical values, row count, or deduplication identity.
 - 2026-09-08: Verify synthetic URLs that differ only by an explicit default port (`:80` for HTTP or `:443` for HTTPS) follow the documented canonicalization policy without splitting one source into duplicate portfolio rows.
 - 2026-09-09: Verify synthetic URLs whose authority is identical and whose path is either empty or `/` normalize to the same documented source identity, avoiding duplicate portfolio rows for equivalent site roots.
+- 2026-09-14: Verify URL canonicalization treats scheme and host casing as case-insensitive while preserving path casing, so potentially distinct case-sensitive paths are never merged into one source identity.
