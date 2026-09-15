@@ -1,6 +1,6 @@
 # Maintenance
 
-> Current maintenance focus (2026-09-14): keep CSV output deterministic and spreadsheet-safe while defining URL canonicalization narrowly—normalize scheme, host, default ports, and equivalent root paths without collapsing meaningful path or query distinctions.
+> Current maintenance focus (2026-09-15): keep CSV output deterministic and spreadsheet-safe while applying URL canonicalization conservatively—normalize only clearly equivalent URL forms and preserve unknown path or query semantics.
 
 - 2026-08-19: Before sharing a portfolio CSV, verify its filename, row count, checksum, collection date, source commit, and provenance note all describe the same generated artifact.
 - 2026-08-20: Keep a documented empty-result check so zero-match runs still produce a valid header-only CSV with the expected schema and no stale rows from prior exports.
