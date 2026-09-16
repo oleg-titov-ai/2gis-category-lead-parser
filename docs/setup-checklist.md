@@ -61,6 +61,7 @@
 - [ ] Confirm schema version, parser commit, collection date, and checksum refer to the same final CSV artifact before handoff.
 - [ ] Reopen the final handoff CSV after transfer and verify its checksum and row count still match the recorded values.
 - [ ] Confirm the final handoff note references exactly one CSV artifact so recipients cannot confuse superseded exports with the current file.
+- [ ] Verify spreadsheet-safety escaping is applied only during export and never changes canonical source URLs, IDs, or deduplication keys.
 
 ## Database Setup
 
