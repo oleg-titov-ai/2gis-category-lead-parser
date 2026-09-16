@@ -379,3 +379,5 @@ Maintenance note: confirm the published CSV filename and provenance note refer t
 Maintenance note: verify formula-like synthetic values remain literal text after CSV export and spreadsheet re-import.
 
 Maintenance note: apply spreadsheet formula escaping only in the export layer so canonical stored values and deduplication keys remain unchanged.
+
+Maintenance note: keep URL canonicalization conservative and preserve path/query distinctions unless the equivalence rule is explicitly documented and tested.
