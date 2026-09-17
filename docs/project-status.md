@@ -1,6 +1,6 @@
 # Project Status
 
-_Last updated: 2026-06-22_
+_Last updated: 2026-09-17_
 
 ## Current State
 
@@ -18,6 +18,8 @@ Implemented:
 - CSV export;
 - terminal reports;
 - setup, security, architecture, and demo documentation.
+
+CSV export keeps canonical source values separate from spreadsheet-safety formatting so deduplication remains stable while spreadsheet output stays safe to review.
 
 ## What Is Working
 
