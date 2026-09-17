@@ -21,6 +21,8 @@ Implemented:
 
 CSV export keeps canonical source values separate from spreadsheet-safety formatting so deduplication remains stable while spreadsheet output stays safe to review.
 
+A small export regression fixture should cover formula-like text and URL identity together, ensuring spreadsheet escaping cannot affect canonical deduplication keys.
+
 ## What Is Working
 
 The current pipeline is:
