@@ -381,3 +381,5 @@ Maintenance note: verify formula-like synthetic values remain literal text after
 Maintenance note: apply spreadsheet formula escaping only in the export layer so canonical stored values and deduplication keys remain unchanged.
 
 Maintenance note: keep URL canonicalization conservative and preserve path/query distinctions unless the equivalence rule is explicitly documented and tested.
+
+Maintenance note: apply spreadsheet escaping after canonicalization, deduplication, and deterministic sorting so export safety cannot change source identity or row order.
