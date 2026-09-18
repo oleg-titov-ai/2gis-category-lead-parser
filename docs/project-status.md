@@ -1,6 +1,6 @@
 # Project Status
 
-_Last updated: 2026-09-17_
+_Last updated: 2026-09-18_
 
 ## Current State
 
@@ -60,7 +60,8 @@ Priority:
 3. improve CSV import/export flow;
 4. add a lightweight dashboard;
 5. prepare integration with n8n and external CRM systems;
-6. add automated tests for duplicate handling and database writes.
+6. add automated tests for duplicate handling and database writes;
+7. add an export regression test confirming spreadsheet escaping runs only after canonicalization and deduplication.
 
 ## Portfolio Positioning
 
