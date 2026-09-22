@@ -382,4 +382,4 @@ Maintenance note: apply spreadsheet formula escaping only in the export layer so
 
 Maintenance note: keep URL canonicalization conservative and preserve path/query distinctions unless the equivalence rule is explicitly documented and tested.
 
-Maintenance note: apply spreadsheet escaping after canonicalization, deduplication, and deterministic sorting so export safety cannot change source identity or row order.
+Maintenance note: apply spreadsheet escaping only after canonicalization, deduplication, and deterministic sorting, and verify stored values plus deduplication keys remain untouched.
