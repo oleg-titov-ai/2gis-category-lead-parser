@@ -62,7 +62,7 @@ Priority:
 5. prepare integration with n8n and external CRM systems;
 6. add automated tests for duplicate handling and database writes;
 7. add an export regression test confirming spreadsheet escaping runs only after canonicalization and deduplication;
-8. add a deterministic export-order regression check so identical canonical inputs produce the same row ordering across repeated demo runs.
+8. add a deterministic export-order regression check: repeated exports of the same canonical demo inputs should have identical row order and CSV bytes.
 
 ## Portfolio Positioning
 
