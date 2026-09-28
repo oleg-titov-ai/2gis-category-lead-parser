@@ -63,6 +63,7 @@ Priority:
 6. add automated tests for duplicate handling and database writes;
 7. add an export regression test confirming spreadsheet escaping runs only after canonicalization and deduplication;
 8. add a deterministic export-order regression check: repeated exports of the same canonical demo inputs should have identical row order, quoting, line endings, and CSV bytes.
+9. document a dry-run export check that writes only to a temporary output path.
 
 ## Portfolio Positioning
 
