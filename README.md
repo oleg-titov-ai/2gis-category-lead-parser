@@ -385,3 +385,5 @@ Maintenance note: keep URL canonicalization conservative and preserve path/query
 Maintenance note: apply spreadsheet escaping only after canonicalization, deduplication, and deterministic sorting, and verify stored values plus deduplication keys remain untouched.
 
 Maintenance note: verify a repeated demo export produces the same sorted rows and headers when the input fixture is unchanged.
+
+Maintenance note: verify deterministic CSV export keeps stable headers and row ordering when canonical inputs are unchanged.
