@@ -387,3 +387,5 @@ Maintenance note: apply spreadsheet escaping only after canonicalization, dedupl
 Maintenance note: verify a repeated demo export produces the same sorted rows and headers when the input fixture is unchanged.
 
 Maintenance note: verify deterministic CSV export keeps stable headers and row ordering when canonical inputs are unchanged.
+
+Maintenance note: verify formula-like values are escaped only in the spreadsheet export layer and remain unchanged in stored data.
