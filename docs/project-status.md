@@ -77,3 +77,5 @@ This project demonstrates:
 - enrichment workflow design;
 - secure configuration practices;
 - business-oriented documentation.
+
+- Record the source date and generating commit beside each portfolio CSV so exported examples remain traceable.
