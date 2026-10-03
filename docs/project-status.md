@@ -83,3 +83,5 @@ This project demonstrates:
 - Verify portfolio CSV files open consistently as UTF-8 and retain deterministic headers without machine-specific metadata.
 
 - Verify source URL normalization is deterministic and preserves distinctions required for contact provenance.
+
+- Verify CSV quoting preserves synthetic values containing commas, quotes, or line breaks during export and re-import.
