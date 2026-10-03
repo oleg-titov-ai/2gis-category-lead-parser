@@ -85,3 +85,5 @@ This project demonstrates:
 - Verify source URL normalization is deterministic and preserves distinctions required for contact provenance.
 
 - Verify CSV quoting preserves synthetic values containing commas, quotes, or line breaks during export and re-import.
+
+- Record the demo command parameters and source commit beside each published export so results can be reproduced.
