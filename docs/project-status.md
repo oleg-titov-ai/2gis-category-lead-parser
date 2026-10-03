@@ -79,3 +79,5 @@ This project demonstrates:
 - business-oriented documentation.
 
 - Record the source date and generating commit beside each portfolio CSV so exported examples remain traceable.
+
+- Verify portfolio CSV files open consistently as UTF-8 and retain deterministic headers without machine-specific metadata.
