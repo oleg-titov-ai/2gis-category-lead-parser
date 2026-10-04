@@ -93,3 +93,5 @@ This project demonstrates:
 - Document the deterministic sort order used for demo exports so regenerated portfolio samples produce reviewable diffs.
 
 - Document bounded retry and backoff behavior for source requests without exposing proxy or credential details.
+
+- Document the pagination stop condition and a bounded page limit so demo runs cannot continue indefinitely.
