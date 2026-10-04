@@ -89,3 +89,5 @@ This project demonstrates:
 - Record the demo command parameters and source commit beside each published export so results can be reproduced.
 
 - Document the fields removed from demo exports so portfolio samples remain free of contact data and unstable identifiers.
+
+- Document the deterministic sort order used for demo exports so regenerated portfolio samples produce reviewable diffs.
