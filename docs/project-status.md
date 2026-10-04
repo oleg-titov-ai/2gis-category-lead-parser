@@ -87,3 +87,5 @@ This project demonstrates:
 - Verify CSV quoting preserves synthetic values containing commas, quotes, or line breaks during export and re-import.
 
 - Record the demo command parameters and source commit beside each published export so results can be reproduced.
+
+- Document the fields removed from demo exports so portfolio samples remain free of contact data and unstable identifiers.
