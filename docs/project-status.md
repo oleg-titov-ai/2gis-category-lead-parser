@@ -91,3 +91,5 @@ This project demonstrates:
 - Document the fields removed from demo exports so portfolio samples remain free of contact data and unstable identifiers.
 
 - Document the deterministic sort order used for demo exports so regenerated portfolio samples produce reviewable diffs.
+
+- Document bounded retry and backoff behavior for source requests without exposing proxy or credential details.
