@@ -99,3 +99,5 @@ This project demonstrates:
 - Document cache lifetime and invalidation rules used by reproducible demo runs.
 
 - Document category-query normalization for whitespace and letter case so equivalent demo inputs remain reproducible.
+
+- Record an output-schema version beside published demo exports so downstream examples remain interpretable.
