@@ -97,3 +97,5 @@ This project demonstrates:
 - Document the pagination stop condition and a bounded page limit so demo runs cannot continue indefinitely.
 
 - Document cache lifetime and invalidation rules used by reproducible demo runs.
+
+- Document category-query normalization for whitespace and letter case so equivalent demo inputs remain reproducible.
