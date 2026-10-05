@@ -95,3 +95,5 @@ This project demonstrates:
 - Document bounded retry and backoff behavior for source requests without exposing proxy or credential details.
 
 - Document the pagination stop condition and a bounded page limit so demo runs cannot continue indefinitely.
+
+- Document cache lifetime and invalidation rules used by reproducible demo runs.
