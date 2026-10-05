@@ -101,3 +101,5 @@ This project demonstrates:
 - Document category-query normalization for whitespace and letter case so equivalent demo inputs remain reproducible.
 
 - Record an output-schema version beside published demo exports so downstream examples remain interpretable.
+
+- Document bounded concurrency and rate-limit handling for reproducible, source-friendly demo runs.
