@@ -103,3 +103,5 @@ This project demonstrates:
 - Record an output-schema version beside published demo exports so downstream examples remain interpretable.
 
 - Document bounded concurrency and rate-limit handling for reproducible, source-friendly demo runs.
+
+- Validate required export columns before publishing a demo dataset so downstream examples remain reproducible.
