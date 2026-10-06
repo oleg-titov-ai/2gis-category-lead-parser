@@ -107,3 +107,5 @@ This project demonstrates:
 - Validate required export columns before publishing a demo dataset so downstream examples remain reproducible.
 
 - Document how empty search results are represented so exports remain structurally valid and easy to audit.
+
+- Document the audit fields recorded with each export, including query parameters, generation time, and schema version.
