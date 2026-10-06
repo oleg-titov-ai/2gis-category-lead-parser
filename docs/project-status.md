@@ -115,3 +115,5 @@ This project demonstrates:
 - Document how interrupted exports are marked so partial files cannot be mistaken for completed datasets.
 
 - Document how source response timestamps are preserved to support freshness checks in exported datasets.
+
+- Document how parser warnings are summarized separately from fatal errors in an export run report.
