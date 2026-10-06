@@ -109,3 +109,5 @@ This project demonstrates:
 - Document how empty search results are represented so exports remain structurally valid and easy to audit.
 
 - Document the audit fields recorded with each export, including query parameters, generation time, and schema version.
+
+- Document how duplicate organizations are identified when source records contain formatting differences in names or addresses.
