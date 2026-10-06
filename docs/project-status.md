@@ -113,3 +113,5 @@ This project demonstrates:
 - Document how duplicate organizations are identified when source records contain formatting differences in names or addresses.
 
 - Document how interrupted exports are marked so partial files cannot be mistaken for completed datasets.
+
+- Document how source response timestamps are preserved to support freshness checks in exported datasets.
