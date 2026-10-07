@@ -119,3 +119,5 @@ This project demonstrates:
 - Document how parser warnings are summarized separately from fatal errors in an export run report.
 
 - Document how exports identify records with missing optional fields without treating them as parser failures.
+
+- Document how category aliases are normalized so repeated runs use consistent query labels.
