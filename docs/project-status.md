@@ -121,3 +121,5 @@ This project demonstrates:
 - Document how exports identify records with missing optional fields without treating them as parser failures.
 
 - Document how category aliases are normalized so repeated runs use consistent query labels.
+
+- Document how malformed source records are counted and reported without exposing raw private contact details.
