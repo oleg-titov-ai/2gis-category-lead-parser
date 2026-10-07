@@ -125,3 +125,5 @@ This project demonstrates:
 - Document how malformed source records are counted and reported without exposing raw private contact details.
 
 - Document how request identifiers are recorded to correlate retries without storing full source payloads.
+
+- Document schema validation across paginated responses before records are merged into a completed export.
