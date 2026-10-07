@@ -123,3 +123,5 @@ This project demonstrates:
 - Document how category aliases are normalized so repeated runs use consistent query labels.
 
 - Document how malformed source records are counted and reported without exposing raw private contact details.
+
+- Document how request identifiers are recorded to correlate retries without storing full source payloads.
