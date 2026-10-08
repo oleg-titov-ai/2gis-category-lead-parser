@@ -129,3 +129,5 @@ This project demonstrates:
 - Document schema validation across paginated responses before records are merged into a completed export.
 
 - Document atomic export publication so validated output replaces prior files only after a run completes successfully.
+
+- Document the row count and checksum recorded after each export is published for integrity verification.
