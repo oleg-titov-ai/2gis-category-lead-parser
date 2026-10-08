@@ -133,3 +133,5 @@ This project demonstrates:
 - Document the row count and checksum recorded after each export is published for integrity verification.
 
 - Document how export integrity metadata is regenerated when a completed dataset is intentionally replaced.
+
+- Document the character encoding and line-ending convention used for portable, reproducible exports.
