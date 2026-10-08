@@ -131,3 +131,5 @@ This project demonstrates:
 - Document atomic export publication so validated output replaces prior files only after a run completes successfully.
 
 - Document the row count and checksum recorded after each export is published for integrity verification.
+
+- Document how export integrity metadata is regenerated when a completed dataset is intentionally replaced.
