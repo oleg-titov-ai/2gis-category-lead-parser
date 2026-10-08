@@ -135,3 +135,5 @@ This project demonstrates:
 - Document how export integrity metadata is regenerated when a completed dataset is intentionally replaced.
 
 - Document the character encoding and line-ending convention used for portable, reproducible exports.
+
+- Document locale-independent formatting for numbers, dates, and delimiters in reproducible exports.
