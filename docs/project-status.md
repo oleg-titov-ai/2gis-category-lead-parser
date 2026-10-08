@@ -127,3 +127,5 @@ This project demonstrates:
 - Document how request identifiers are recorded to correlate retries without storing full source payloads.
 
 - Document schema validation across paginated responses before records are merged into a completed export.
+
+- Document atomic export publication so validated output replaces prior files only after a run completes successfully.
