@@ -139,3 +139,5 @@ This project demonstrates:
 - Document locale-independent formatting for numbers, dates, and delimiters in reproducible exports.
 
 - Document locale-independent text collation so export ordering remains stable across operating systems.
+
+- Document integrity verification for compressed exports, including checks before publication and after extraction.
