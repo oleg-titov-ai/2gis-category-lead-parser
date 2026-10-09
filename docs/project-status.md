@@ -137,3 +137,5 @@ This project demonstrates:
 - Document the character encoding and line-ending convention used for portable, reproducible exports.
 
 - Document locale-independent formatting for numbers, dates, and delimiters in reproducible exports.
+
+- Document locale-independent text collation so export ordering remains stable across operating systems.
