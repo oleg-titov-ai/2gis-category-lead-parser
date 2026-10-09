@@ -143,3 +143,5 @@ This project demonstrates:
 - Document integrity verification for compressed exports, including checks before publication and after extraction.
 
 - Document deterministic handling of null, empty, and missing values so regenerated exports produce stable diffs.
+
+- Document collision-resistant export naming when multiple reproducible runs complete within the same time window.
