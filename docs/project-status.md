@@ -151,3 +151,5 @@ This project demonstrates:
 - Document checkpoint-safe retry behavior when the map provider returns rate-limit responses during a demo export.
 
 - Document checkpoint recovery when a pagination cursor expires before a rate-limited demo collection finishes.
+
+- Document source-attribution and license metadata included with each portfolio-safe demonstration export.
