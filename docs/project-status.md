@@ -147,3 +147,5 @@ This project demonstrates:
 - Document collision-resistant export naming when multiple reproducible runs complete within the same time window.
 
 - Document deterministic field ordering for CSV and JSON exports when the public export schema is extended.
+
+- Document checkpoint-safe retry behavior when the map provider returns rate-limit responses during a demo export.
