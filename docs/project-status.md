@@ -153,3 +153,5 @@ This project demonstrates:
 - Document checkpoint recovery when a pagination cursor expires before a rate-limited demo collection finishes.
 
 - Document source-attribution and license metadata included with each portfolio-safe demonstration export.
+
+- Document coordinate precision in demonstration exports to avoid implying accuracy beyond the source data.
