@@ -145,3 +145,5 @@ This project demonstrates:
 - Document deterministic handling of null, empty, and missing values so regenerated exports produce stable diffs.
 
 - Document collision-resistant export naming when multiple reproducible runs complete within the same time window.
+
+- Document deterministic field ordering for CSV and JSON exports when the public export schema is extended.
