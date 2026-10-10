@@ -149,3 +149,5 @@ This project demonstrates:
 - Document deterministic field ordering for CSV and JSON exports when the public export schema is extended.
 
 - Document checkpoint-safe retry behavior when the map provider returns rate-limit responses during a demo export.
+
+- Document checkpoint recovery when a pagination cursor expires before a rate-limited demo collection finishes.
