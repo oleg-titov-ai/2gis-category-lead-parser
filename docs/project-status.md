@@ -163,3 +163,5 @@ This project demonstrates:
 - Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales.
 
 - Document stable handling of listings whose category label changes between paginated source responses.
+
+- Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports.
