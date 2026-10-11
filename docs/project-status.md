@@ -157,3 +157,5 @@ This project demonstrates:
 - Document coordinate precision in demonstration exports to avoid implying accuracy beyond the source data.
 
 - Document deterministic duplicate handling when the same listing appears on multiple paginated result pages.
+
+- Document Unicode normalization for business names before deterministic duplicate detection and export sorting.
