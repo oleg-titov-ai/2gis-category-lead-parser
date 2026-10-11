@@ -161,3 +161,5 @@ This project demonstrates:
 - Document Unicode normalization for business names before deterministic duplicate detection and export sorting.
 
 - Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales.
+
+- Document stable handling of listings whose category label changes between paginated source responses.
