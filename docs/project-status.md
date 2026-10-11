@@ -159,3 +159,5 @@ This project demonstrates:
 - Document deterministic duplicate handling when the same listing appears on multiple paginated result pages.
 
 - Document Unicode normalization for business names before deterministic duplicate detection and export sorting.
+
+- Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales.
