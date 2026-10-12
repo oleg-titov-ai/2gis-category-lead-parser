@@ -167,3 +167,5 @@ This project demonstrates:
 - Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports.
 
 - Document stable export ordering when the source changes result ranking between otherwise identical requests.
+
+- Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales.
