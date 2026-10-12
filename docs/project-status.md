@@ -171,3 +171,5 @@ This project demonstrates:
 - Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales.
 
 - Document source provenance fields for each demonstration export without exposing request credentials or private metadata.
+
+- Document deterministic sorting of non-Latin business names without relying on the operator's system locale.
