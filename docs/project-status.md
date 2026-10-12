@@ -165,3 +165,5 @@ This project demonstrates:
 - Document stable handling of listings whose category label changes between paginated source responses.
 
 - Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports.
+
+- Document stable export ordering when the source changes result ranking between otherwise identical requests.
