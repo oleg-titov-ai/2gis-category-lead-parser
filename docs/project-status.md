@@ -173,3 +173,5 @@ This project demonstrates:
 - Document source provenance fields for each demonstration export without exposing request credentials or private metadata.
 
 - Document deterministic sorting of non-Latin business names without relying on the operator's system locale.
+
+- Document an explicit incomplete-export marker when pagination stops before all expected source pages are processed.
