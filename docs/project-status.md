@@ -169,3 +169,5 @@ This project demonstrates:
 - Document stable export ordering when the source changes result ranking between otherwise identical requests.
 
 - Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales.
+
+- Document source provenance fields for each demonstration export without exposing request credentials or private metadata.
