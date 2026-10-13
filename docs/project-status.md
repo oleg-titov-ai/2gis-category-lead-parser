@@ -175,3 +175,5 @@ This project demonstrates:
 - Document deterministic sorting of non-Latin business names without relying on the operator's system locale.
 
 - Document an explicit incomplete-export marker when pagination stops before all expected source pages are processed.
+
+- Document canonical website URL normalization before duplicate detection and deterministic export.
