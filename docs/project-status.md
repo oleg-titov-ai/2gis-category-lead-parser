@@ -177,3 +177,5 @@ This project demonstrates:
 - Document an explicit incomplete-export marker when pagination stops before all expected source pages are processed.
 
 - Document canonical website URL normalization before duplicate detection and deterministic export.
+
+- Document deterministic address-component normalization while preserving the source-formatted address for display.
