@@ -181,3 +181,5 @@ This project demonstrates:
 - Document deterministic address-component normalization while preserving the source-formatted address for display.
 
 - Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible.
+
+- Document consistent treatment of temporarily closed and permanently closed listings in demonstration exports.
