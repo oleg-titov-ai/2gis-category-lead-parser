@@ -183,3 +183,5 @@ This project demonstrates:
 - Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible.
 
 - Document consistent treatment of temporarily closed and permanently closed listings in demonstration exports.
+
+- Document the deduplication preference when one business appears in multiple categories with conflicting metadata.
