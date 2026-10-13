@@ -179,3 +179,5 @@ This project demonstrates:
 - Document canonical website URL normalization before duplicate detection and deterministic export.
 
 - Document deterministic address-component normalization while preserving the source-formatted address for display.
+
+- Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible.
