@@ -182,6 +182,6 @@ This project demonstrates:
 
 - Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible.
 
-- Document consistent treatment of temporarily closed and permanently closed listings in demonstration exports.
+- Document consistent treatment of temporarily closed and permanently closed listings in demonstration exports; use synthetic open, temporarily closed, permanently closed, and unknown-status records to specify expected inclusion and exported status values.
 
 - Document the deduplication preference when one business appears in multiple categories with conflicting metadata; add a synthetic two-category example with the same source identifier and specify the expected retained fields, category provenance, and single exported row.
