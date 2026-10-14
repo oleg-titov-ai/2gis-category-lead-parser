@@ -184,4 +184,4 @@ This project demonstrates:
 
 - Document consistent treatment of temporarily closed and permanently closed listings in demonstration exports.
 
-- Document the deduplication preference when one business appears in multiple categories with conflicting metadata.
+- Document the deduplication preference when one business appears in multiple categories with conflicting metadata; add a synthetic two-category example with the same source identifier and specify the expected retained fields, category provenance, and single exported row.
