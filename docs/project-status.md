@@ -180,7 +180,7 @@ This project demonstrates:
 
 - Document deterministic address-component normalization while preserving the source-formatted address for display.
 
-- Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible.
+- Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible; reconcile synthetic input, duplicate, filtered, and exported counts using mutually exclusive categories, with a separate completion flag for unfinished pagination.
 
 - Document consistent treatment of temporarily closed and permanently closed listings in demonstration exports; use synthetic open, temporarily closed, permanently closed, and unknown-status records to specify expected inclusion and exported status values.
 
