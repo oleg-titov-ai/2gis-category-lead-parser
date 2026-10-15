@@ -174,7 +174,7 @@ This project demonstrates:
 
 - Document deterministic sorting of non-Latin business names without relying on the operator's system locale.
 
-- Document an explicit incomplete-export marker when pagination stops before all expected source pages are processed.
+- Document an explicit incomplete-export marker when pagination stops before all expected source pages are processed; use a synthetic interrupted page sequence to specify the completion flag and processed-page count, distinguishing partial results from a successful zero-row export.
 
 - Document canonical website URL normalization before duplicate detection and deterministic export; use synthetic URLs to specify treatment of host casing, trailing slashes, and query parameters, including distinct paths that must not be merged.
 
