@@ -166,7 +166,7 @@ This project demonstrates:
 
 - Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports.
 
-- Document stable export ordering when the source changes result ranking between otherwise identical requests.
+- Document stable export ordering when the source changes result ranking between otherwise identical requests; use two synthetic inputs with swapped source ranks to define deterministic sort keys and verify byte-equivalent row order without sourced business records.
 
 - Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales; define encoding, delimiter, header, and BOM policy, then round-trip a synthetic non-Latin row containing a delimiter and line break without using sourced business data.
 
