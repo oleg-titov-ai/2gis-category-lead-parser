@@ -178,7 +178,7 @@ This project demonstrates:
 
 - Document canonical website URL normalization before duplicate detection and deterministic export; use synthetic URLs to specify treatment of host casing, trailing slashes, and query parameters, including distinct paths that must not be merged.
 
-- Document deterministic address-component normalization while preserving the source-formatted address for display.
+- Document deterministic address-component normalization while preserving the source-formatted address for display; use synthetic examples with whitespace, missing components, and distinct building numbers to specify normalized output without merging different premises.
 
 - Document export row-count summaries so incomplete or unexpectedly filtered demonstration results are visible; reconcile synthetic input, duplicate, filtered, and exported counts using mutually exclusive categories, with a separate completion flag for unfinished pagination.
 
