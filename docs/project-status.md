@@ -170,7 +170,7 @@ This project demonstrates:
 
 - Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales; define encoding, delimiter, header, and BOM policy, then round-trip a synthetic non-Latin row containing a delimiter and line break without using sourced business data.
 
-- Document source provenance fields for each demonstration export without exposing request credentials or private metadata.
+- Document source provenance fields for each demonstration export without exposing request credentials or private metadata; define provider, retrieval timestamp, category, page reference, and schema version fields, and show them with a synthetic row that omits tokens and sensitive query parameters.
 
 - Document deterministic sorting of non-Latin business names without relying on the operator's system locale.
 
