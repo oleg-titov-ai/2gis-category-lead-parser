@@ -168,7 +168,7 @@ This project demonstrates:
 
 - Document stable export ordering when the source changes result ranking between otherwise identical requests.
 
-- Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales.
+- Document CSV encoding and delimiter guarantees so demonstration exports open consistently across locales; define encoding, delimiter, header, and BOM policy, then round-trip a synthetic non-Latin row containing a delimiter and line break without using sourced business data.
 
 - Document source provenance fields for each demonstration export without exposing request credentials or private metadata.
 
