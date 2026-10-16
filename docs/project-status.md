@@ -164,7 +164,7 @@ This project demonstrates:
 
 - Document stable handling of listings whose category label changes between paginated source responses.
 
-- Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports.
+- Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports; use synthetic present, unavailable, and redacted cases to specify value and status representation so a redacted field cannot be mistaken for a confirmed absence.
 
 - Document stable export ordering when the source changes result ranking between otherwise identical requests; use two synthetic inputs with swapped source ranks to define deterministic sort keys and verify byte-equivalent row order without sourced business records.
 
