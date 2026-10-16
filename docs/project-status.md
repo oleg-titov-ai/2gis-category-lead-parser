@@ -158,7 +158,7 @@ This project demonstrates:
 
 - Document deterministic duplicate handling when the same listing appears on multiple paginated result pages.
 
-- Document Unicode normalization for business names before deterministic duplicate detection and export sorting.
+- Document Unicode normalization for business names before deterministic duplicate detection and export sorting; use synthetic composed and decomposed equivalents to specify the comparison form while preserving original display text, and verify equal normalized names alone never merge distinct source identifiers.
 
 - Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales; define the timestamp's meaning and precision, then serialize one synthetic instant from two timezone settings to verify identical UTC output with an explicit Z suffix.
 
