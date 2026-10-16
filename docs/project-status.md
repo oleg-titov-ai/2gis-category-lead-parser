@@ -172,7 +172,7 @@ This project demonstrates:
 
 - Document source provenance fields for each demonstration export without exposing request credentials or private metadata; define provider, retrieval timestamp, category, page reference, and schema version fields, and show them with a synthetic row that omits tokens and sensitive query parameters.
 
-- Document deterministic sorting of non-Latin business names without relying on the operator's system locale.
+- Document deterministic sorting of non-Latin business names without relying on the operator's system locale; define normalization, case handling, and a stable tie-break key, then compare synthetic Cyrillic and Latin fixtures under two locale settings while preserving original display names.
 
 - Document an explicit incomplete-export marker when pagination stops before all expected source pages are processed; use a synthetic interrupted page sequence to specify the completion flag and processed-page count, distinguishing partial results from a successful zero-row export.
 
