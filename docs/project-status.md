@@ -162,7 +162,7 @@ This project demonstrates:
 
 - Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales.
 
-- Document stable handling of listings whose category label changes between paginated source responses.
+- Document stable handling of listings whose category label changes between paginated source responses; use a synthetic repeated source identifier with two category labels to define label precedence and provenance while verifying the listing remains a single export row.
 
 - Document how unavailable contact fields are distinguished from intentionally redacted values in demonstration exports; use synthetic present, unavailable, and redacted cases to specify value and status representation so a redacted field cannot be mistaken for a confirmed absence.
 
