@@ -160,7 +160,7 @@ This project demonstrates:
 
 - Document Unicode normalization for business names before deterministic duplicate detection and export sorting.
 
-- Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales.
+- Document UTC ISO-8601 export timestamps so artifacts remain comparable across operator timezones and locales; define the timestamp's meaning and precision, then serialize one synthetic instant from two timezone settings to verify identical UTC output with an explicit Z suffix.
 
 - Document stable handling of listings whose category label changes between paginated source responses; use a synthetic repeated source identifier with two category labels to define label precedence and provenance while verifying the listing remains a single export row.
 
