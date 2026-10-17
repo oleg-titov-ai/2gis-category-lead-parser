@@ -154,7 +154,7 @@ This project demonstrates:
 
 - Document source-attribution and license metadata included with each portfolio-safe demonstration export.
 
-- Document coordinate precision in demonstration exports to avoid implying accuracy beyond the source data.
+- Document coordinate precision in demonstration exports to avoid implying accuracy beyond the source data; use synthetic positive, negative, and missing coordinate cases to define rounding and null representation, retaining no more decimal precision than the source supplies and never substituting zero for missing values.
 
 - Document deterministic duplicate handling when the same listing appears on multiple paginated result pages; replay synthetic pages containing one repeated source identifier in reversed order to define field precedence and verify one exported row with consistent duplicate counts.
 
