@@ -156,7 +156,7 @@ This project demonstrates:
 
 - Document coordinate precision in demonstration exports to avoid implying accuracy beyond the source data.
 
-- Document deterministic duplicate handling when the same listing appears on multiple paginated result pages.
+- Document deterministic duplicate handling when the same listing appears on multiple paginated result pages; replay synthetic pages containing one repeated source identifier in reversed order to define field precedence and verify one exported row with consistent duplicate counts.
 
 - Document Unicode normalization for business names before deterministic duplicate detection and export sorting; use synthetic composed and decomposed equivalents to specify the comparison form while preserving original display text, and verify equal normalized names alone never merge distinct source identifiers.
 
