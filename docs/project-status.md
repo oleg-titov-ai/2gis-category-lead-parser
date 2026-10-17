@@ -148,7 +148,7 @@ This project demonstrates:
 
 - Document deterministic field ordering for CSV and JSON exports when the public export schema is extended.
 
-- Document checkpoint-safe retry behavior when the map provider returns rate-limit responses during a demo export.
+- Document checkpoint-safe retry behavior when the map provider returns rate-limit responses during a demo export; use synthetic throttled responses to specify bounded backoff, unchanged page checkpoints until success, and explicit incomplete status when retries are exhausted without duplicating exported rows.
 
 - Document checkpoint recovery when a pagination cursor expires before a rate-limited demo collection finishes; use a synthetic expired-cursor response to define restart or abort behavior, retain deduplication state, and mark incomplete output explicitly without repeatedly retrying the invalid cursor.
 
