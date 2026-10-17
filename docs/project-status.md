@@ -152,7 +152,7 @@ This project demonstrates:
 
 - Document checkpoint recovery when a pagination cursor expires before a rate-limited demo collection finishes.
 
-- Document source-attribution and license metadata included with each portfolio-safe demonstration export.
+- Document source-attribution and license metadata included with each portfolio-safe demonstration export; define provenance and permission-reference fields using a clearly labelled synthetic example, marking unknown terms as unverified rather than implying a provider endorsement or redistribution permission.
 
 - Document coordinate precision in demonstration exports to avoid implying accuracy beyond the source data; use synthetic positive, negative, and missing coordinate cases to define rounding and null representation, retaining no more decimal precision than the source supplies and never substituting zero for missing values.
 
