@@ -142,7 +142,7 @@ This project demonstrates:
 
 - Document integrity verification for compressed exports, including checks before publication and after extraction.
 
-- Document deterministic handling of null, empty, and missing values so regenerated exports produce stable diffs.
+- Document deterministic handling of null, empty, and missing values so regenerated exports produce stable diffs; use synthetic null, empty-string, absent-key, zero, and false cases to define CSV and JSON representations without collapsing valid zero or false values into missing data.
 
 - Document collision-resistant export naming when multiple reproducible runs complete within the same time window; use two synthetic runs with the same timestamp to specify unique output paths and no-overwrite behavior, keeping run identity in filenames separate from deterministic export contents.
 
