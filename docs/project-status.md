@@ -140,7 +140,7 @@ This project demonstrates:
 
 - Document locale-independent text collation so export ordering remains stable across operating systems.
 
-- Document integrity verification for compressed exports, including checks before publication and after extraction.
+- Document integrity verification for compressed exports, including checks before publication and after extraction; use synthetic valid and corrupted archives to compare file counts and content checksums, refusing publication on mismatch while preserving the previous verified artifact.
 
 - Document deterministic handling of null, empty, and missing values so regenerated exports produce stable diffs; use synthetic null, empty-string, absent-key, zero, and false cases to define CSV and JSON representations without collapsing valid zero or false values into missing data.
 
