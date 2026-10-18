@@ -144,7 +144,7 @@ This project demonstrates:
 
 - Document deterministic handling of null, empty, and missing values so regenerated exports produce stable diffs.
 
-- Document collision-resistant export naming when multiple reproducible runs complete within the same time window.
+- Document collision-resistant export naming when multiple reproducible runs complete within the same time window; use two synthetic runs with the same timestamp to specify unique output paths and no-overwrite behavior, keeping run identity in filenames separate from deterministic export contents.
 
 - Document deterministic field ordering for CSV and JSON exports when the public export schema is extended; use synthetic records with shuffled input keys to define CSV column order and serialized JSON key order, checking existing field positions and schema-version handling without implying JSON consumers depend on key order.
 
