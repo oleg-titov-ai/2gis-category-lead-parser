@@ -146,7 +146,7 @@ This project demonstrates:
 
 - Document collision-resistant export naming when multiple reproducible runs complete within the same time window.
 
-- Document deterministic field ordering for CSV and JSON exports when the public export schema is extended.
+- Document deterministic field ordering for CSV and JSON exports when the public export schema is extended; use synthetic records with shuffled input keys to define CSV column order and serialized JSON key order, checking existing field positions and schema-version handling without implying JSON consumers depend on key order.
 
 - Document checkpoint-safe retry behavior when the map provider returns rate-limit responses during a demo export; use synthetic throttled responses to specify bounded backoff, unchanged page checkpoints until success, and explicit incomplete status when retries are exhausted without duplicating exported rows.
 
