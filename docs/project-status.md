@@ -138,7 +138,7 @@ This project demonstrates:
 
 - Document locale-independent formatting for numbers, dates, and delimiters in reproducible exports.
 
-- Document locale-independent text collation so export ordering remains stable across operating systems.
+- Document locale-independent text collation so export ordering remains stable across operating systems; name the comparison algorithm and version where applicable, then use synthetic accented and mixed-script names to verify identical order across supported environments, marking untested combinations explicitly.
 
 - Document integrity verification for compressed exports, including checks before publication and after extraction; use synthetic valid and corrupted archives to compare file counts and content checksums, refusing publication on mismatch while preserving the previous verified artifact.
 
