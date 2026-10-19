@@ -136,7 +136,7 @@ This project demonstrates:
 
 - Document the character encoding and line-ending convention used for portable, reproducible exports; state the encoding, byte-order-mark policy, and newline sequence for each format, then round-trip synthetic non-ASCII text and embedded line breaks to verify preserved values without using real listings.
 
-- Document locale-independent formatting for numbers, dates, and delimiters in reproducible exports.
+- Document locale-independent formatting for numbers, dates, and delimiters in reproducible exports; compare synthetic decimal values and timestamps under two locale settings, state the numeric precision and date format, and verify CSV delimiters and parsed values remain unchanged without real listing data.
 
 - Document locale-independent text collation so export ordering remains stable across operating systems; name the comparison algorithm and version where applicable, then use synthetic accented and mixed-script names to verify identical order across supported environments, marking untested combinations explicitly.
 
