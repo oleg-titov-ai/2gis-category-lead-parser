@@ -78,6 +78,10 @@ This project demonstrates:
 - secure configuration practices;
 - business-oriented documentation.
 
+## Export maintenance checklist
+
+The checks below are pending verification guidance, separate from the portfolio capabilities listed above. Record synthetic fixture inputs, observed results, and the generating commit for completed checks; do not present untested export behavior as guaranteed.
+
 - Record the source date and generating commit beside each portfolio CSV so exported examples remain traceable.
 
 - Verify portfolio CSV files open consistently as UTF-8 and retain deterministic headers without machine-specific metadata.
