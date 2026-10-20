@@ -128,7 +128,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document how request identifiers are recorded to correlate retries without storing full source payloads.
 
-- Document schema validation across paginated responses before records are merged into a completed export.
+- Document schema validation across pages using a synthetic second page with a missing required field or changed field type; define rejection or quarantine rules and mark the export incomplete when required validation fails, preserving the previous verified output instead of silently dropping invalid rows.
 
 - Document atomic export publication so validated output replaces prior files only after a run completes successfully.
 
