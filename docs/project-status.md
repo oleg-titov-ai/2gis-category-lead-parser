@@ -82,15 +82,13 @@ This project demonstrates:
 
 The checks below are pending verification guidance, separate from the portfolio capabilities listed above. Record synthetic fixture inputs, observed results, and the generating commit for completed checks; do not present untested export behavior as guaranteed.
 
-- Record the source date and generating commit beside each portfolio CSV so exported examples remain traceable.
+- Record the source date, demo command parameters, and generating source commit beside each portfolio CSV so examples remain traceable and reproducible; use synthetic parameters without credentials or private query values.
 
 - Verify portfolio CSV files open consistently as UTF-8 and retain deterministic headers without machine-specific metadata.
 
 - Verify source URL normalization is deterministic and preserves distinctions required for contact provenance.
 
 - Verify CSV quoting preserves synthetic values containing commas, quotes, or line breaks during export and re-import; include a field containing all three, compare parsed values rather than raw line counts, and verify an embedded line break does not become an extra record.
-
-- Record the demo command parameters and source commit beside each published export so results can be reproduced.
 
 - Document the fields removed from demo exports so portfolio samples remain free of contact data and unstable identifiers.
 
