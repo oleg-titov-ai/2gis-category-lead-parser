@@ -110,7 +110,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Validate required export columns before publishing a demo dataset so downstream examples remain reproducible.
 
-- Document how empty search results are represented so exports remain structurally valid and easy to audit.
+- Document a successful zero-result export with synthetic empty input: preserve required CSV headers or the documented empty JSON structure, record zero rows and completed status, and distinguish it from source failure or interrupted pagination without inserting placeholder organizations.
 
 - Document the audit fields recorded with each export, including query parameters, generation time, and schema version.
 
