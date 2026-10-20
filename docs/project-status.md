@@ -98,7 +98,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document the pagination stop condition and a bounded page limit so demo runs cannot continue indefinitely.
 
-- Document cache lifetime and invalidation rules used by reproducible demo runs.
+- Document cache lifetime, cache-key inputs, and invalidation triggers using synthetic fresh, expired, and missing entries; record the fixture snapshot version separately from cache age so reproducible demos do not silently mix old cached records with refreshed pages.
 
 - Document category-query normalization for whitespace and letter case so equivalent demo inputs remain reproducible.
 
