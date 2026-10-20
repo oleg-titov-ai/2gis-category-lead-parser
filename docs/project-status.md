@@ -130,7 +130,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document schema validation across pages using a synthetic second page with a missing required field or changed field type; define rejection or quarantine rules and mark the export incomplete when required validation fails, preserving the previous verified output instead of silently dropping invalid rows.
 
-- Document atomic export publication so validated output replaces prior files only after a run completes successfully.
+- Document atomic export publication so validated output replaces prior files only after a run completes successfully; use synthetic success, validation-failure, and interruption cases to specify temporary-output naming and promotion, verifying failed runs leave the previous verified export and its integrity metadata unchanged.
 
 - Document the row count and checksum recorded after each export is published for integrity verification.
 
