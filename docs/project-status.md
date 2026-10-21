@@ -120,7 +120,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document how parser warnings are summarized separately from fatal errors in an export run report; use synthetic optional-field, malformed-record, and page-level failures to define category counts, exit status, completion marker, and redacted examples without including raw contact details or source payloads.
 
-- Document how exports identify records with missing optional fields without treating them as parser failures.
+- Document how exports identify records with missing optional fields without treating them as parser failures; use synthetic absent, empty, and malformed optional values to define exported null representation, warning counts, and schema-valid completion while keeping required-field failures separate.
 
 - Document how category aliases are normalized so repeated runs use consistent query labels.
 
