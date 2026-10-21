@@ -116,7 +116,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document how interrupted exports are marked so partial files cannot be mistaken for completed datasets.
 
-- Document how source response timestamps are preserved to support freshness checks in exported datasets.
+- Document how source response timestamps are preserved to support freshness checks in exported datasets; use synthetic source-provided, receipt-only, missing, and invalid timestamps to define normalized UTC fields, provenance, age calculation, and an unknown-freshness marker without substituting export time for source time.
 
 - Document how parser warnings are summarized separately from fatal errors in an export run report; use synthetic optional-field, malformed-record, and page-level failures to define category counts, exit status, completion marker, and redacted examples without including raw contact details or source payloads.
 
