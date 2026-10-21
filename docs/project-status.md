@@ -132,7 +132,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document atomic export publication so validated output replaces prior files only after a run completes successfully; use synthetic success, validation-failure, and interruption cases to specify temporary-output naming and promotion, verifying failed runs leave the previous verified export and its integrity metadata unchanged.
 
-- Document the row count and checksum recorded after each export is published for integrity verification.
+- Document the row count and checksum recorded after each export is published for integrity verification; use a synthetic completed export to define the checksum algorithm, byte scope, metadata format, and verification command, with mismatched or missing metadata marking the artifact unverified rather than silently regenerating evidence.
 
 - Document how export integrity metadata is regenerated when a completed dataset is intentionally replaced.
 
