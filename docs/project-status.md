@@ -191,3 +191,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document canonical formatting of public phone fields while preserving the source-formatted display value; use synthetic country-code, extension, ambiguous-region, and invalid cases to define normalized output and validation status, and never merge listings solely because normalized phone values match.
 
 - Document canonicalization of public email fields while preserving the source-formatted display value; use synthetic casing, surrounding whitespace, internationalized-domain, invalid, and missing cases to define normalized output and validation status, and never merge listings solely because normalized addresses match.
+
+- Document website redirect handling during URL validation without silently changing source provenance; use synthetic same-host, cross-host, loop, and excessive-hop redirects to define the retained source URL, resolved URL status, and validation outcome without contacting real businesses.
