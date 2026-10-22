@@ -189,3 +189,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document the deduplication preference when one business appears in multiple categories with conflicting metadata; add a synthetic two-category example with the same source identifier and specify the expected retained fields, category provenance, and single exported row.
 
 - Document canonical formatting of public phone fields while preserving the source-formatted display value; use synthetic country-code, extension, ambiguous-region, and invalid cases to define normalized output and validation status, and never merge listings solely because normalized phone values match.
+
+- Document canonicalization of public email fields while preserving the source-formatted display value; use synthetic casing, surrounding whitespace, internationalized-domain, invalid, and missing cases to define normalized output and validation status, and never merge listings solely because normalized addresses match.
