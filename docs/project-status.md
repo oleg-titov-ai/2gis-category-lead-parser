@@ -100,7 +100,7 @@ The checks below are pending verification guidance, separate from the portfolio 
 
 - Document cache lifetime, cache-key inputs, and invalidation triggers using synthetic fresh, expired, and missing entries; record the fixture snapshot version separately from cache age so reproducible demos do not silently mix old cached records with refreshed pages.
 
-- Document category-query normalization for whitespace and letter case so equivalent demo inputs remain reproducible.
+- Document category-query normalization for whitespace and letter case so equivalent demo inputs remain reproducible; use synthetic leading, trailing, repeated-space, mixed-case, and non-Latin examples to define canonical query labels, cache keys, and audit values while preserving the original display input separately.
 
 - Record an output-schema version beside published demo exports so downstream examples remain interpretable.
 
