@@ -197,3 +197,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document source-schema drift handling when pagination responses add, remove, or change the type of a field; use synthetic compatible, unknown-field, missing-required-field, and wrong-type records to define tolerant parsing versus explicit incomplete status without silently coercing business data.
 
 - Document locale-independent parsing and serialization of numeric fields such as coordinates and ratings; use synthetic dot-decimal, comma-decimal, grouped, missing, and invalid values to define accepted input and deterministic output without relying on the operator's locale.
+
+- Document preservation and optional normalization of public opening-hours fields; use synthetic closed, all-day, split-interval, overnight, localized-text, and unknown-timezone cases to retain the source representation, mark parsing confidence, and avoid inventing a timezone or open-now status.
