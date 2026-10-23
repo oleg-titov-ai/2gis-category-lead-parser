@@ -199,3 +199,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document locale-independent parsing and serialization of numeric fields such as coordinates and ratings; use synthetic dot-decimal, comma-decimal, grouped, missing, and invalid values to define accepted input and deterministic output without relying on the operator's locale.
 
 - Document preservation and optional normalization of public opening-hours fields; use synthetic closed, all-day, split-interval, overnight, localized-text, and unknown-timezone cases to retain the source representation, mark parsing confidence, and avoid inventing a timezone or open-now status.
+
+- Document how a changing source total during pagination affects completion status; use synthetic growing, shrinking, and stable page sets to define a snapshot boundary or explicit incomplete marker, retain deduplication, and avoid claiming full coverage from a moving dataset.
