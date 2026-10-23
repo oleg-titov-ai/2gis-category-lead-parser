@@ -195,3 +195,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document website redirect handling during URL validation without silently changing source provenance; use synthetic same-host, cross-host, loop, and excessive-hop redirects to define the retained source URL, resolved URL status, and validation outcome without contacting real businesses.
 
 - Document source-schema drift handling when pagination responses add, remove, or change the type of a field; use synthetic compatible, unknown-field, missing-required-field, and wrong-type records to define tolerant parsing versus explicit incomplete status without silently coercing business data.
+
+- Document locale-independent parsing and serialization of numeric fields such as coordinates and ratings; use synthetic dot-decimal, comma-decimal, grouped, missing, and invalid values to define accepted input and deterministic output without relying on the operator's locale.
