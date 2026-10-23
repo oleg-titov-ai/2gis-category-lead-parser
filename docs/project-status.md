@@ -201,3 +201,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document preservation and optional normalization of public opening-hours fields; use synthetic closed, all-day, split-interval, overnight, localized-text, and unknown-timezone cases to retain the source representation, mark parsing confidence, and avoid inventing a timezone or open-now status.
 
 - Document how a changing source total during pagination affects completion status; use synthetic growing, shrinking, and stable page sets to define a snapshot boundary or explicit incomplete marker, retain deduplication, and avoid claiming full coverage from a moving dataset.
+
+- Document latitude/longitude order and range validation for public location fields; use synthetic valid, swapped, out-of-range, missing, and zero-coordinate records to preserve source values, mark invalid geometry explicitly, and avoid silently relocating an organization.
