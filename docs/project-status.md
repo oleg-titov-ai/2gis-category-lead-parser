@@ -205,3 +205,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document latitude/longitude order and range validation for public location fields; use synthetic valid, swapped, out-of-range, missing, and zero-coordinate records to preserve source values, mark invalid geometry explicitly, and avoid silently relocating an organization.
 
 - Document validation of truncated or partially decoded source responses before pagination state advances; use synthetic incomplete JSON, mismatched length, interrupted compression, and valid payloads to retry within bounds, retain the prior checkpoint, and mark output incomplete without duplicating rows.
+
+- Document normalization of HTML entities and Unicode whitespace in public names and addresses; use synthetic non-breaking, narrow, zero-width, repeated, and ordinary spaces to keep display text readable, preserve the original source field for audit, and avoid unstable duplicate keys.
