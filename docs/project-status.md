@@ -207,3 +207,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document validation of truncated or partially decoded source responses before pagination state advances; use synthetic incomplete JSON, mismatched length, interrupted compression, and valid payloads to retry within bounds, retain the prior checkpoint, and mark output incomplete without duplicating rows.
 
 - Document normalization of HTML entities and Unicode whitespace in public names and addresses; use synthetic non-breaking, narrow, zero-width, repeated, and ordinary spaces to keep display text readable, preserve the original source field for audit, and avoid unstable duplicate keys.
+
+- Document handling of control characters and null bytes in public text fields before storage and export; use synthetic tabs, line breaks, C0 controls, nulls, and ordinary Unicode to preserve permitted formatting, reject unsafe bytes deterministically, and keep CSV row boundaries stable.
