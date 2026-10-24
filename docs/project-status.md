@@ -211,3 +211,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document handling of control characters and null bytes in public text fields before storage and export; use synthetic tabs, line breaks, C0 controls, nulls, and ordinary Unicode to preserve permitted formatting, reject unsafe bytes deterministically, and keep CSV row boundaries stable.
 
 - Document cache validation when the source returns `304 Not Modified`; use synthetic present, expired, corrupt, and missing cache entries to reuse only a verified body, perform a bounded unconditional refetch when needed, and avoid advancing pagination from an absent payload.
+
+- Document rejection of successful HTTP responses whose body is HTML, a consent page, or a challenge instead of the expected JSON schema; use synthetic content types and body signatures to avoid caching or parsing the page as business data, retry within bounds, and mark the export incomplete.
