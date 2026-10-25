@@ -213,3 +213,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document cache validation when the source returns `304 Not Modified`; use synthetic present, expired, corrupt, and missing cache entries to reuse only a verified body, perform a bounded unconditional refetch when needed, and avoid advancing pagination from an absent payload.
 
 - Document rejection of successful HTTP responses whose body is HTML, a consent page, or a challenge instead of the expected JSON schema; use synthetic content types and body signatures to avoid caching or parsing the page as business data, retry within bounds, and mark the export incomplete.
+
+- Document handling of unexpected `206 Partial Content` responses for endpoints expected to return complete JSON pages; use synthetic valid full, correctly ranged, mismatched-range, and missing-range bodies to avoid caching partial business data, retry safely, and retain the prior pagination checkpoint.
