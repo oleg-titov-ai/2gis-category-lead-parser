@@ -215,3 +215,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document rejection of successful HTTP responses whose body is HTML, a consent page, or a challenge instead of the expected JSON schema; use synthetic content types and body signatures to avoid caching or parsing the page as business data, retry within bounds, and mark the export incomplete.
 
 - Document handling of unexpected `206 Partial Content` responses for endpoints expected to return complete JSON pages; use synthetic valid full, correctly ranged, mismatched-range, and missing-range bodies to avoid caching partial business data, retry safely, and retain the prior pagination checkpoint.
+
+- Document the scope of source identifiers when the same identifier can appear in different cities or regions; use synthetic same-scope duplicates and cross-scope collisions to define the composite identity, preserve location provenance, and prevent unrelated public listings from being merged into one export row.
