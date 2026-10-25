@@ -217,3 +217,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document handling of unexpected `206 Partial Content` responses for endpoints expected to return complete JSON pages; use synthetic valid full, correctly ranged, mismatched-range, and missing-range bodies to avoid caching partial business data, retry safely, and retain the prior pagination checkpoint.
 
 - Document the scope of source identifiers when the same identifier can appear in different cities or regions; use synthetic same-scope duplicates and cross-scope collisions to define the composite identity, preserve location provenance, and prevent unrelated public listings from being merged into one export row.
+
+- Document handling of source rate limits and HTTP `429` responses during pagination; use synthetic valid, missing, excessive, and malformed retry-delay values to bound backoff, preserve the last completed page checkpoint, avoid duplicate rows, and mark the export incomplete when the retry budget is exhausted.
