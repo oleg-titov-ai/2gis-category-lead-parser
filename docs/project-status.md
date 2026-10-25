@@ -219,3 +219,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document the scope of source identifiers when the same identifier can appear in different cities or regions; use synthetic same-scope duplicates and cross-scope collisions to define the composite identity, preserve location provenance, and prevent unrelated public listings from being merged into one export row.
 
 - Document handling of source rate limits and HTTP `429` responses during pagination; use synthetic valid, missing, excessive, and malformed retry-delay values to bound backoff, preserve the last completed page checkpoint, avoid duplicate rows, and mark the export incomplete when the retry budget is exhausted.
+
+- Document transport-failure handling for DNS, TLS, connection-reset, and timeout errors during source pagination; use synthetic failures to apply bounded retries, avoid caching an error as a valid empty page, retain the last completed checkpoint, and mark the demonstration export incomplete without duplicating rows.
