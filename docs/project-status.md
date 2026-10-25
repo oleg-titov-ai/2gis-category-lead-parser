@@ -221,3 +221,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document handling of source rate limits and HTTP `429` responses during pagination; use synthetic valid, missing, excessive, and malformed retry-delay values to bound backoff, preserve the last completed page checkpoint, avoid duplicate rows, and mark the export incomplete when the retry budget is exhausted.
 
 - Document transport-failure handling for DNS, TLS, connection-reset, and timeout errors during source pagination; use synthetic failures to apply bounded retries, avoid caching an error as a valid empty page, retain the last completed checkpoint, and mark the demonstration export incomplete without duplicating rows.
+
+- Document maximum response-body limits before decoding source pages; use synthetic ordinary, boundary, oversized-declared, oversized-streamed, and compressed-expansion payloads to abort safely, avoid caching partial public data, retain the last completed pagination checkpoint, and mark the export incomplete.
