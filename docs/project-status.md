@@ -227,3 +227,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document response-decoding rules when source `Content-Type`, charset, and compression headers disagree with payload bytes; use synthetic valid UTF-8, mislabeled, invalid-sequence, truncated-compression, and unsupported-encoding fixtures to fail explicitly, avoid caching corrupted public data, and retain the pagination checkpoint.
 
 - Document source-endpoint redirect handling during pagination; use synthetic same-host, allowlisted-host, cross-host, loop, downgrade, and excessive-hop redirects to preserve request identity and checkpoints, refuse credential forwarding outside the approved origin, and mark exports incomplete rather than accepting an unexpected body.
+
+- Document JSON parser limits for nesting depth, object-member count, array length, and total scalar count; use synthetic ordinary, boundary, deeply nested, wide, and many-small-value payloads to reject pathological responses before persistence, preserve the last page checkpoint, and mark the export incomplete.
