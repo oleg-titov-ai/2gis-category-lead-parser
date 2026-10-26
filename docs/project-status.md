@@ -223,3 +223,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document transport-failure handling for DNS, TLS, connection-reset, and timeout errors during source pagination; use synthetic failures to apply bounded retries, avoid caching an error as a valid empty page, retain the last completed checkpoint, and mark the demonstration export incomplete without duplicating rows.
 
 - Document maximum response-body limits before decoding source pages; use synthetic ordinary, boundary, oversized-declared, oversized-streamed, and compressed-expansion payloads to abort safely, avoid caching partial public data, retain the last completed pagination checkpoint, and mark the export incomplete.
+
+- Document response-decoding rules when source `Content-Type`, charset, and compression headers disagree with payload bytes; use synthetic valid UTF-8, mislabeled, invalid-sequence, truncated-compression, and unsupported-encoding fixtures to fail explicitly, avoid caching corrupted public data, and retain the pagination checkpoint.
