@@ -229,3 +229,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document source-endpoint redirect handling during pagination; use synthetic same-host, allowlisted-host, cross-host, loop, downgrade, and excessive-hop redirects to preserve request identity and checkpoints, refuse credential forwarding outside the approved origin, and mark exports incomplete rather than accepting an unexpected body.
 
 - Document JSON parser limits for nesting depth, object-member count, array length, and total scalar count; use synthetic ordinary, boundary, deeply nested, wide, and many-small-value payloads to reject pathological responses before persistence, preserve the last page checkpoint, and mark the export incomplete.
+
+- Document pagination recovery when a source cursor or continuation token expires; use synthetic valid, expired, replayed, malformed, and replaced-token responses to restart only from a documented safe boundary, deduplicate by scoped public identifier, retain the last completed checkpoint, and mark the export incomplete if continuity cannot be proven.
