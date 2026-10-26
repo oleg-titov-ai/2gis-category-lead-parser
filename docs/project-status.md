@@ -225,3 +225,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document maximum response-body limits before decoding source pages; use synthetic ordinary, boundary, oversized-declared, oversized-streamed, and compressed-expansion payloads to abort safely, avoid caching partial public data, retain the last completed pagination checkpoint, and mark the export incomplete.
 
 - Document response-decoding rules when source `Content-Type`, charset, and compression headers disagree with payload bytes; use synthetic valid UTF-8, mislabeled, invalid-sequence, truncated-compression, and unsupported-encoding fixtures to fail explicitly, avoid caching corrupted public data, and retain the pagination checkpoint.
+
+- Document source-endpoint redirect handling during pagination; use synthetic same-host, allowlisted-host, cross-host, loop, downgrade, and excessive-hop redirects to preserve request identity and checkpoints, refuse credential forwarding outside the approved origin, and mark exports incomplete rather than accepting an unexpected body.
