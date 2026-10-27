@@ -239,3 +239,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document pagination consistency when public source records are inserted, removed, or reordered during a run; use synthetic stable, shifted, duplicated, missing, and changed-sort snapshots to deduplicate by scoped identifier, detect continuity gaps, retain the last proven checkpoint, and mark the export incomplete rather than mixing snapshots silently.
 
 - Document numeric parsing rules for non-finite values, exponential notation, and integers beyond the safe exact range; use synthetic ordinary, boundary, `NaN`, infinity-like, oversized-ID, and precision-loss fixtures to reject ambiguous fields or preserve identifiers as strings, avoid corrupted deduplication, and mark the export incomplete.
+
+- Document spreadsheet-formula injection protection for CSV exports; use synthetic values beginning with `=`, `+`, `-`, `@`, tabs, line breaks, and ordinary text to preserve the original public value in a safe representation, keep row boundaries stable, and verify exports without opening them in a live spreadsheet application.
