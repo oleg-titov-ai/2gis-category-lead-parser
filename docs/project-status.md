@@ -235,3 +235,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document handling of unexpected HTTP `206 Partial Content` responses from source pages; use synthetic valid-full, unsolicited-partial, malformed-range, truncated-range, and repeated-range fixtures to reject incomplete JSON, avoid caching partial public data, retain the last completed checkpoint, and mark the export incomplete.
 
 - Document response-length validation when `Content-Length` disagrees with bytes received; use synthetic exact, shorter, longer, missing, duplicate-header, and compressed-response fixtures to reject truncated or ambiguous JSON, avoid caching partial public data, retain the last completed checkpoint, and mark the export incomplete.
+
+- Document pagination consistency when public source records are inserted, removed, or reordered during a run; use synthetic stable, shifted, duplicated, missing, and changed-sort snapshots to deduplicate by scoped identifier, detect continuity gaps, retain the last proven checkpoint, and mark the export incomplete rather than mixing snapshots silently.
