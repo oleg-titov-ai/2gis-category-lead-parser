@@ -233,3 +233,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document pagination recovery when a source cursor or continuation token expires; use synthetic valid, expired, replayed, malformed, and replaced-token responses to restart only from a documented safe boundary, deduplicate by scoped public identifier, retain the last completed checkpoint, and mark the export incomplete if continuity cannot be proven.
 
 - Document handling of unexpected HTTP `206 Partial Content` responses from source pages; use synthetic valid-full, unsolicited-partial, malformed-range, truncated-range, and repeated-range fixtures to reject incomplete JSON, avoid caching partial public data, retain the last completed checkpoint, and mark the export incomplete.
+
+- Document response-length validation when `Content-Length` disagrees with bytes received; use synthetic exact, shorter, longer, missing, duplicate-header, and compressed-response fixtures to reject truncated or ambiguous JSON, avoid caching partial public data, retain the last completed checkpoint, and mark the export incomplete.
