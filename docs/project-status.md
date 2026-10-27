@@ -237,3 +237,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document response-length validation when `Content-Length` disagrees with bytes received; use synthetic exact, shorter, longer, missing, duplicate-header, and compressed-response fixtures to reject truncated or ambiguous JSON, avoid caching partial public data, retain the last completed checkpoint, and mark the export incomplete.
 
 - Document pagination consistency when public source records are inserted, removed, or reordered during a run; use synthetic stable, shifted, duplicated, missing, and changed-sort snapshots to deduplicate by scoped identifier, detect continuity gaps, retain the last proven checkpoint, and mark the export incomplete rather than mixing snapshots silently.
+
+- Document numeric parsing rules for non-finite values, exponential notation, and integers beyond the safe exact range; use synthetic ordinary, boundary, `NaN`, infinity-like, oversized-ID, and precision-loss fixtures to reject ambiguous fields or preserve identifiers as strings, avoid corrupted deduplication, and mark the export incomplete.
