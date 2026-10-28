@@ -251,3 +251,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document handling of bidirectional Unicode controls in public names, addresses, and CSV fields; use synthetic LTR, RTL, mixed-script, isolate, override, unbalanced, and ordinary values to prevent misleading rendered order, preserve auditable source text safely, keep row boundaries stable, and mark ambiguous records incomplete.
 
 - Document source throttling when public endpoints return `429` or rate-limit metadata; use synthetic valid, missing, malformed, excessive, and conflicting `Retry-After` fixtures to apply bounded authoritative delay with jitter, avoid parallel retry storms, retain the last proven checkpoint, and mark the export incomplete if the retry budget expires.
+
+- Document rejection of obsolete folded, oversized, excessive, or ambiguously duplicated HTTP response headers; use synthetic ordinary, `obs-fold`, boundary-size, repeated, conflicting, and mixed-case fixtures to parse deterministically, avoid caching ambiguous public payloads, retain the last proven checkpoint, and mark the export incomplete.
