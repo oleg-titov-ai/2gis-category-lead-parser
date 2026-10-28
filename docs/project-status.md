@@ -247,3 +247,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document validation of public latitude and longitude fields before export; use synthetic valid, boundary, swapped, out-of-range, excessive-precision, null, and non-numeric coordinates to preserve the documented axis order, reject ambiguous locations, avoid false deduplication, and mark affected rows or exports incomplete.
 
 - Document parsing policy for duplicate keys in public JSON objects; use synthetic identical, conflicting, case-variant, nested, boundary-size, and escaped-key fixtures to reject ambiguous records before normalization, avoid parser-dependent last-key-wins behavior, retain the last proven checkpoint, and mark the export incomplete.
+
+- Document handling of bidirectional Unicode controls in public names, addresses, and CSV fields; use synthetic LTR, RTL, mixed-script, isolate, override, unbalanced, and ordinary values to prevent misleading rendered order, preserve auditable source text safely, keep row boundaries stable, and mark ambiguous records incomplete.
