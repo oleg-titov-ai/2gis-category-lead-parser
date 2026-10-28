@@ -243,3 +243,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document spreadsheet-formula injection protection for CSV exports; use synthetic values beginning with `=`, `+`, `-`, `@`, tabs, line breaks, and ordinary text to preserve the original public value in a safe representation, keep row boundaries stable, and verify exports without opening them in a live spreadsheet application.
 
 - Document the CSV byte-level output contract for UTF-8 BOM presence, line endings, final newline, and quoting; use synthetic Unicode, multiline, empty, and boundary records to produce deterministic cross-platform bytes, preserve field content, and verify fixtures without introducing locale-dependent encoding.
+
+- Document validation of public latitude and longitude fields before export; use synthetic valid, boundary, swapped, out-of-range, excessive-precision, null, and non-numeric coordinates to preserve the documented axis order, reject ambiguous locations, avoid false deduplication, and mark affected rows or exports incomplete.
