@@ -245,3 +245,5 @@ The checks below are pending verification guidance, separate from the portfolio 
 - Document the CSV byte-level output contract for UTF-8 BOM presence, line endings, final newline, and quoting; use synthetic Unicode, multiline, empty, and boundary records to produce deterministic cross-platform bytes, preserve field content, and verify fixtures without introducing locale-dependent encoding.
 
 - Document validation of public latitude and longitude fields before export; use synthetic valid, boundary, swapped, out-of-range, excessive-precision, null, and non-numeric coordinates to preserve the documented axis order, reject ambiguous locations, avoid false deduplication, and mark affected rows or exports incomplete.
+
+- Document parsing policy for duplicate keys in public JSON objects; use synthetic identical, conflicting, case-variant, nested, boundary-size, and escaped-key fixtures to reject ambiguous records before normalization, avoid parser-dependent last-key-wins behavior, retain the last proven checkpoint, and mark the export incomplete.
